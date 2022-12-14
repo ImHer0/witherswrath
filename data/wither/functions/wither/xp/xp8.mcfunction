@@ -1,0 +1,2 @@
+execute at @e[type=armor_stand,tag=starxp] run summon minecraft:experience_orb ~ ~ ~ {Value:145,Motion:[-0.2d,0.5d,0d]}
+execute at @e[type=armor_stand,tag=starxp] run playsound minecraft:entity.experience_bottle.throw neutral @a ~ ~ ~ 1 2

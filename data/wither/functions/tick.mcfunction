@@ -1,7 +1,7 @@
 function wither:wither/wither_skull
 function wither:wither/wither_charge1
 function wither:wither/wither_convert
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if entity @e[type=wither,distance=4..] run function wither:wither/wither_check
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if entity @e[type=wither,distance=2..] run function wither:wither/wither_check
 
 execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run data get entity @s Health
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] if score @e[type=minecraft:wither,limit=1,sort=nearest] wtime matches 3 run function wither:wither/wither_midpoint1
