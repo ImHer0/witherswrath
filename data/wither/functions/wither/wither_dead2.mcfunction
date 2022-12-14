@@ -19,9 +19,9 @@ schedule function wither:wither/wither_xp 1t
 
 # MUSIC
 stopsound @a music
-playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 0.9
-playsound minecraft:music.creative music @a 
-playsound minecraft:entity.player.levelup master @s ~ ~ ~ 100 .85
+execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star"}}] run playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 0.9
+execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star"}}] run playsound minecraft:music.creative music @a 
+execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star"}}] run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 100 .85
 
 # PEACE
 execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star"}}] run kill @e[type=wither_skeleton,distance=..200]
