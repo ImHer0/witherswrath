@@ -1,0 +1,2 @@
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run tp @s @e[type=armor_stand,limit=1,tag=poswi]
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run kill @e[type=armor_stand,tag=poswi]

@@ -6,7 +6,7 @@ execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomName:'"\\u00A70\\u00A7lWither\\u00A7r"',CustomNameVisible:0b,NoAI:0}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run tp @s ~ ~ ~
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:lightning_bolt ~ ~ ~ 
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run tp @s @e[type=armor_stand,limit=1,nbt={Tags:["poswi"]}]
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run kill @e[type=armor_stand,nbt={Tags:["poswi"]}]
+
+schedule function wither:wither/wither_midpoint2.5 1s
 
 scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] wtime 2

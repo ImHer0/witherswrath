@@ -10,7 +10,6 @@ scoreboard objectives add wtime dummy
 scoreboard objectives add smoke dummy
 team add Wither
 team modify Wither nametagVisibility never
-scoreboard players set wHoming whoming 0
 scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] smoke 1
 scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] wtime 2
 

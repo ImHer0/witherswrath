@@ -10,6 +10,7 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] run data merge entity 
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] run team join Wither @s
 
 # MODIFICATIONS
+effect give @e[type=player,distance=..100] minecraft:darkness 5 1
 effect give @e[type=!player,type=!wither,distance=..100] minecraft:weakness 600 5
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @s {Tags:["Charge","Wither"],ArmorItems:[{Count:1,id:"leather_boots",tag:{Enchantments:[{id:"blast_protection",lvl:255}]}},{Count:1,id:"leather_leggings",tag:{Enchantments:[{id:"blast_protection",lvl:255}]}},{Count:1,id:"leather_chestplate",tag:{Enchantments:[{id:"blast_protection",lvl:100}]}},{Count:1,id:"leather_helmet",tag:{Enchantments:[{id:"blast_protection",lvl:255}]}}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockback_resistance",Base:0.2},{Base:1256.0d,Name:"generic.follow_range"},{Name:"generic.movement_speed",Base:2},{Name:"generic.max_health",Base:600}],Health:600}
 
