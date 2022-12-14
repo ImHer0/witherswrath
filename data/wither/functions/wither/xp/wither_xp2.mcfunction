@@ -1,1 +1,1 @@
-execute at @e[type=item,sort=nearest,limit=1,nbt={Item:{id:"minecraft:nether_star"}}] run summon minecraft:experience_orb ~ ~ ~ {Value:55,Motion:[0d,0.4d,0.1d]}
+execute at @e[type=armor_stand,tag=starxp] run summon minecraft:experience_orb ~ ~ ~ {Value:55,Motion:[0d,0.4d,0.3d]}

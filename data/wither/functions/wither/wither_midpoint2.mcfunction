@@ -7,6 +7,6 @@ data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomName:'"\
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run tp @s ~ ~ ~
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:lightning_bolt ~ ~ ~ 
 
-schedule function wither:wither/wither_midpoint2.5 1s
+schedule function wither:wither/wither_midpoint2.5 10t
 
 scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] wtime 2
