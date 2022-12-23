@@ -35,7 +35,15 @@ effect give @e[type=wither_skeleton] resistance 3 10
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {NoAI: 1, Invulnerable: 1}
 
 # EFFECTS
-execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.basalt_deltas.mood hostile @a[distance=..100]
-execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @a[distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.basalt_deltas.mood hostile @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+execute at @e[type=wither,limit=1,sort=nearest] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+
 particle minecraft:flash ~ ~2 ~ 0 0 0 0.1 1 normal
 particle minecraft:end_rod ~ ~2 ~ 0.3 0.3 0.3 0.1 120 normal

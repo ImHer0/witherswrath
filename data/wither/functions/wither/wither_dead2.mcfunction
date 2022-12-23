@@ -15,8 +15,6 @@ execute as @e[type=item,sort=nearest,nbt={Item: {id: "minecraft:nether_star"}}] 
 
 schedule function wither:wither/wither_xp 1t
 
-
-
 # MUSIC
 stopsound @a music
 execute at @e[type=item,sort=nearest,nbt={Item: {id: "minecraft:nether_star"}}] run playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 0.9
