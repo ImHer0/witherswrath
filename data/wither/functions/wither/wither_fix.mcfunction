@@ -19,4 +19,4 @@ kill @e[type=armor_stand,tag=poswi]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
 
-tellraw @s {"text":"Please do /reload or disable and enable the plugin to complete","bold":true,"color":"#890101","clickEvent":{"action":"open_url","value":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}}
+tellraw @s {"text":"Please do /reload or disable and enable the datapack to complete","bold":true,"color":"#890101","clickEvent":{"action":"open_url","value":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}}
