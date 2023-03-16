@@ -13,24 +13,24 @@ The wither has **600HP** by default and does additional knockback resistance. It
 
 #### Start "Animation"
 
-![image](https://imgur.com/a8vpDbU.gif)
+<img src="https://imgur.com/dmZAGhc.gif" width="600" height="340">
 
 #### Buffed Wither Skulls
 
-![image](https://imgur.com/oryvAp0.gif)
+<img src="https://imgur.com/gxy6k3Q.gif" width="600" height="340">
 
 #### Wither Charge Attack
 
 Only does this once its at 250 HP left
 
-![image](https://imgur.com/RvDBFFQ.gif)
+<img src="https://imgur.com/RvDBFFQ.gif" width="600" height="340">
 
 #### Wither Homing Skull
 
 Weaker but never misses, _blocking with shield is advised_
 
-![image](https://imgur.com/heu9hPi.gif)
-![image](https://imgur.com/YLgNMeW.gif)
+<img src="https://imgur.com/1nKZl9l.gif" width="600" height="340">
+<img src="https://imgur.com/YLgNMeW.gif" width="600" height="340">
 
 and More!
 
@@ -43,6 +43,7 @@ If you have any ideas, please leave them in the comments as I might use them if 
 This pack was made for 1.19 and up
 
 ### There are multiple new features in this wither but to help customize it I've added some toggles (more coming soon)
+
 <p style="color: orange; font-size: 20px;"> Toggle Options: [ /function wither:config ] </p>
 
 #### This Wither is quite destructive when it comes to environment ~~so doing /gamerule mobgriefing false~~ (You can use the Config command above to disable it!)
