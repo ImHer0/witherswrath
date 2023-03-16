@@ -44,7 +44,7 @@ This pack was made for 1.19 and up
 
 ### There are multiple new features in this wither but to help customize it I've added some toggles (more coming soon)
 
-<p style="color: orange; font-size: 20px;"> Toggle Options: [ /function wither:config ] </p>
+#### Toggle Options: [ /function wither:config ]
 
 #### This Wither is quite destructive when it comes to environment ~~so doing /gamerule mobgriefing false~~ (You can use the Config command above to disable it!)
 
