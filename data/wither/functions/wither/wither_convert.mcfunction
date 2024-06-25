@@ -1,2 +1,0 @@
-execute as @e[type=wither,limit=1,sort=nearest] at @s if entity @e[type=skeleton,distance=..40,limit=1,sort=nearest] at @e[type=skeleton,distance=..40,limit=1,sort=nearest] run summon wither_skeleton ~ ~.01 ~ {DeathLootTable: "wither:entities/wskeleton", Tags: ["wSkel"], Attributes: [{Name: "generic.max_health", Base: 15}], Health: 15}
-execute as @e[type=wither,limit=1,sort=nearest] at @s if entity @e[type=skeleton,distance=..40,limit=1,sort=nearest] run tp @e[type=skeleton,limit=1,sort=nearest] ~ ~-100 ~

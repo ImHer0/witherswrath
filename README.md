@@ -2,9 +2,7 @@
 
 Welcome to my github page where you can suggest and report errors on my datapack, as well as check development!
 
-> THIS PACK WORKS WITH VERSIONS BELOW 1.19 THERE ARE ONLY A FEW COMMANDS THAT ACTUALLY TAKE ADVANTAGE OF THE NEWER VERSIONS, OVERALL IT SHOULD STILL WORK!
-
-Heyo, this is my iteration at the wither to make it more of a challenge with brand new attack formats as well as adding the 600HP from the wither in bedrock edition, because not everyone likes all the additions etc, I added slight toggles to both reduce the amount of chaos, but there will not be an easier version of the wither. I've been making this Wither as an attempt to make a harder Wither and mainly just showcasing it to friends therefore I never intended it to be perfect
+This is my iteration at the wither to make it more of a challenge with brand new attack formats as well as adding the 600HP from the wither in bedrock edition, because not everyone likes all the additions etc, I added slight toggles to both reduce the amount of chaos, but there will not be an easier version of the wither. I've been making this Wither as an attempt to make a harder Wither and mainly just showcasing it to friends therefore I never intended it to be perfect
 
 <details>
 <summary>What does this wither Include?</summary>
@@ -40,7 +38,7 @@ and More!
 
 If you have any ideas, please leave them in the comments as I might use them if I think they'll be a good addition even if it's just a different thing to the data pack.
 
-This pack was made for 1.19 and up
+This pack was made for 1.21 and up
 
 ### There are multiple new features in this wither but to help customize it I've added some toggles (more coming soon)
 
@@ -59,5 +57,3 @@ This pack was made for 1.19 and up
 ---
 
 ### If you're using this in a server please tell me of any impacts in performance it may have since I've not tested this for myself with enough players to notice performance changes
-
-<sub> PS. This is my first ever Datapack so any feedback is greatly appreciated and will be taken into consideration as i'll try to do some changes and keep this project active for a while </sub>
