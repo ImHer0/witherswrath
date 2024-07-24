@@ -1,0 +1,10 @@
+{
+    "criteria": {
+      "trigger": {
+        "trigger": "minecraft:impossible"
+      }
+    },
+    "rewards": {
+      "function": "wither:wither/wither_giveskullsonce"
+    }
+  }

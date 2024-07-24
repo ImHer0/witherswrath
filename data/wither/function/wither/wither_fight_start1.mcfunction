@@ -21,13 +21,19 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound mi
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound entity.parrot.imitate.wither hostile @a ~ ~ ~ 2 0.1
 
 # CHEESING: breaks every block in area above and sides not below to avoid the void
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] if block ~ ~1 ~ bedrock run tp ~ ~8 ~
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] if block ~ ~2 ~ bedrock run tp ~ ~10 ~
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] run fill ~-2 ~1 ~-2 ~2 ~5 ~2 air destroy
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~1 ~ minecraft:bedrock run tp ~ ~-8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~2 ~ minecraft:bedrock run tp ~ ~-8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~3 ~ minecraft:bedrock run tp ~ ~-8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~4 ~ minecraft:bedrock run tp ~ ~-8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-1 ~ minecraft:bedrock run tp ~ ~8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-2 ~ minecraft:bedrock run tp ~ ~8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-3 ~ minecraft:bedrock run tp ~ ~8 ~
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-4 ~ minecraft:bedrock run tp ~ ~8 ~
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock run fill ~-2 ~1 ~-2 ~2 ~5 ~2 air destroy
 
 # ASCEND
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if entity @e[type=player,distance=..30] at @e[type=player] run summon area_effect_cloud ~ ~ ~ {Radius: 2f, Duration: 10, RadiusOnUse: -0.01f, RadiusPerTick: -0.0002f, ReapplicationDelay: 10, Effects: [{Duration: 125, Id: 25, Amplifier: 2b}, {Duration: 400, Id: 28, Amplifier: 1b}]}
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:levitation",amplifier:3,duration:140},{id:"minecraft:slow_falling",amplifier:20,duration:400}]}
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:levitation",amplifier:3,duration:140},{id:"minecraft:slow_falling",amplifier:20,duration:400}]}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] run team join Wither @s
 
 # MODIFICATIONS
