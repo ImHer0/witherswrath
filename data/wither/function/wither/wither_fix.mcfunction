@@ -1,10 +1,8 @@
-scoreboard objectives remove wTrophy
 scoreboard objectives remove Health
 scoreboard objectives remove Health1
 scoreboard objectives remove wcharge1
 scoreboard objectives remove wtime
 scoreboard objectives remove smoke
-scoreboard objectives remove whoming
 scoreboard objectives remove witherCount
 scoreboard objectives remove checkHealth
 
@@ -15,6 +13,9 @@ advancement revoke @a only wither:wither/hit2_wither
 advancement revoke @a only wither:wither/hit3_wither
 advancement revoke @a only wither:wither/prehit_wither
 advancement revoke @a only wither:wither/summoned_wither
+advancement revoke @a only wither:wither/give_wskulls
+
+data remove storage temp Head
 
 kill @e[type=armor_stand,tag=hStand]
 kill @e[type=armor_stand,tag=poswi]

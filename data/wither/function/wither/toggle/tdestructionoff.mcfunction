@@ -1,3 +1,3 @@
-execute if score destroy wdestroy matches 1 run scoreboard players set destroy wdestroy 2
+data modify storage wither:options toggledestruction set value 0
 
 schedule function wither:config 2s

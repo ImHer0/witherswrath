@@ -1,1 +1,0 @@
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run fill ~-2 ~1 ~-2 ~2 ~3 ~2 air destroy

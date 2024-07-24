@@ -1,1 +1,0 @@
-execute at @e[type=wither,limit=1,sort=nearest] if entity @e[type=wither,limit=1] run give @e[type=player,limit=1,sort=nearest] wither_skeleton_skull 3

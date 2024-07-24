@@ -14,11 +14,11 @@ scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] wtime 2
 weather thunder
 gamerule doFireTick false
 gamerule doDaylightCycle false
-execute if score destroy wdestroy matches 2 run gamerule mobGriefing false
+execute if data storage wither:options {toggledestruction:0} run gamerule mobGriefing false
 time set 22000t
 stopsound @a music
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:music.nether.basalt_deltas music @a[distance=..100] ~ ~-2 ~ 2
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound entity.parrot.imitate.wither hostile @a ~ ~ ~ 2 0.1
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.parrot.imitate.wither hostile @a ~ ~ ~ 2 0.1
 
 # CHEESING: breaks every block in area above and sides not below to avoid the void
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~1 ~ minecraft:bedrock run tp ~ ~-8 ~
