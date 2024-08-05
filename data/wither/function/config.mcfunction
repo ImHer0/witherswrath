@@ -1,4 +1,4 @@
 gamerule sendCommandFeedback false
-schedule function wither:wither/toggle/toggle 2t
+execute as @s run function wither:wither/toggle/toggle
 schedule function wither:wither/toggle/toggle1 10s
 

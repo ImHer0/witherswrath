@@ -17,6 +17,8 @@ advancement revoke @a only wither:wither/give_wskulls
 
 data remove storage temp Head
 
+tp @e[type=wither] ~ -100 ~
+kill @e[type=wither]
 kill @e[type=armor_stand,tag=hStand]
 kill @e[type=armor_stand,tag=poswi]
 kill @e[type=armor_stand,tag=starxp]
@@ -24,4 +26,4 @@ kill @e[type=armor_stand,tag=chargew]
 
 execute as @e[type=player] run attribute @s minecraft:generic.gravity modifier remove 1
 
-tellraw @s {"text":"Please do /reload or disable and enable the datapack to complete","bold":true,"color":"#890101","clickEvent":{"action":"open_url","value":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}}   
+tellraw @s {"text":"Please do /reload or disable and enable the datapack to complete","bold":true,"color":"#5e0000","clickEvent":{"action":"suggest_command","value":"/reload"}}

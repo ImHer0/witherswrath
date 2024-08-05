@@ -1,5 +1,6 @@
 {
     "values": [
-        "wither:load"
+        "wither:load",
+        "wither:5tick"
     ]
 }

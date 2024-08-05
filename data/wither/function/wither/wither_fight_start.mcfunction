@@ -12,4 +12,4 @@ execute if score witherCount witherCount matches 1 run schedule function wither:
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/wither_spawn 15s
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/wither_start1 219t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/wither_unstuck 15s
-schedule function wither:wither/wither_safemode 1200s
+

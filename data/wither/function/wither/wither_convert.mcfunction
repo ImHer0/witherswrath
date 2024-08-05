@@ -19,3 +19,5 @@ execute at @e[type=wither,limit=1,sort=nearest] as @e[limit=1,sort=random,nbt={T
 execute at @e[type=wither,limit=1,sort=nearest] as @e[limit=1,sort=random,nbt={Tags:["sMarked"]}] run tp @s ~ ~-200 ~
 
 execute at @e[type=wither,limit=1,sort=nearest] as @e[limit=1,sort=random,nbt={Tags:["sMarked"]}] run kill @s
+
+execute if entity @e[type=wither,limit=1,sort=nearest] run schedule function wither:wither/wither_convert 15t

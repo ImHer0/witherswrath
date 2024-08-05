@@ -7,6 +7,7 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] run summon armor_stand
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] run tp @e[type=minecraft:wither,limit=1,sort=nearest] ^ ^ ^ facing entity @p feet
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.wither.death hostile @e[distance=..32,type=player] ~ ~ ~ 1 2 1
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] run effect give @s minecraft:resistance 3 255
+data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Glowing:1b}
 
 # PREVENT 1 SHOTTING PLAYERS
 effect give @e[type=player] minecraft:resistance 5 0
