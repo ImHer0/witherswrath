@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "wither:wither/wither_skeleton"
+        "function": "wither:wither/skeleton"
     }
 }

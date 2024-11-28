@@ -1,6 +1,6 @@
 {
   "rewards": {
-    "function": "wither:wither/wither_hit3"
+    "function": "wither:wither/hit3"
   },
   "criteria": {
     "requirement": {

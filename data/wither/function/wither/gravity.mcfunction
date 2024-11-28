@@ -1,0 +1,1 @@
+execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1

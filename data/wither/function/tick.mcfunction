@@ -6,7 +6,7 @@ execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run
 
 
 # WITHER CHECK
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/wither_chargepre
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/wither_homingpre
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/wither_spawn
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/charge/chargepre
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/homing/homingpre
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/spawn
 

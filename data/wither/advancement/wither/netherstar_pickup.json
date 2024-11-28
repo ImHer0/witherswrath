@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "components": {
+              "minecraft:custom_data": "{ww_netherstar:1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "wither:nether_star/trophy"
+  }
+}
