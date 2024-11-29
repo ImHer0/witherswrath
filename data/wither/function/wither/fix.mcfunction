@@ -29,8 +29,6 @@ kill @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},l
 
 execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 
-schedule function wither:wither/killroguestar 1t
-
 function wither:load
 
 tellraw @s {"text":"Wither's Wrath has been fixed!","bold":true,"color":"#5e0000"}
