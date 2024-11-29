@@ -1,5 +1,4 @@
 scoreboard objectives remove Health
-scoreboard objectives remove Health1
 scoreboard objectives remove wcharge1
 scoreboard objectives remove wtime
 scoreboard objectives remove smoke
@@ -21,11 +20,17 @@ tp @e[type=wither] ~ -100 ~
 kill @e[type=wither]
 kill @e[type=item_display,tag=nether_star,limit=1]
 kill @e[tag=wSkel]
+kill @e[tag=wArcher]
 kill @e[type=armor_stand,tag=hStand]
 kill @e[type=armor_stand,tag=poswi]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
+kill @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1,tag=]
 
 execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 
-tellraw @s {"text":"Please do /reload or disable and enable the datapack to complete","bold":true,"color":"#5e0000","clickEvent":{"action":"suggest_command","value":"/reload"}}
+schedule function wither:wither/killroguestar 1t
+
+function wither:load
+
+tellraw @s {"text":"Wither's Wrath has been fixed!","bold":true,"color":"#5e0000"}
