@@ -6,7 +6,6 @@ execute unless score witherCount witherCount matches 1 unless score witherCount 
 execute unless score witherCount witherCount matches 0 unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 2 run scoreboard players set witherCount witherCount 0
 
 execute if entity @e[type=blaze,nbt={Tags: ["wArcher"]}] unless data entity @e[type=blaze,limit=1] {Passengers: [{}]} run kill @e[type=blaze,limit=1]
-execute as @e[type=blaze,nbt={Tags: ["smoke"]}] if score @e[type=minecraft:wither,limit=1,sort=nearest] smoke matches 1 if entity @e[type=blaze,nbt={Tags: ["smoke"]}] run tp @s @e[type=wither,sort=nearest,limit=1]
 execute as @e[type=blaze,nbt={Tags: ["wArcher"]},sort=random,limit=1] unless data entity @s {Passengers: [{}]} run kill @s
 execute unless entity @e[type=player] run kill @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=hStand]
 

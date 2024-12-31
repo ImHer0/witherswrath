@@ -1,6 +1,2 @@
-# EFFECTS
-data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomName: '{"color":"#d7bfff","obfuscated":true,"text":"Wither"}', CustomNameVisible: 0b}
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggledestruction:1} run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.break_block block @a[distance=..30] ~ ~ ~ 0.5 .1
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.wither_skeleton.hurt hostile @a[distance=..30] ~ ~ ~ 0.5 0.1
-execute if data storage wither:options {toggledestruction:1} as @e[type=minecraft:wither,limit=1,sort=nearest] at @s unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock unless block ~ ~6 ~ minecraft:bedrock run tp @s ~ ~.3 ~ ~30 ~
+# Ran by nothing lol OLD FILE
+

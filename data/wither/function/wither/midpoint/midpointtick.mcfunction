@@ -1,4 +1,3 @@
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] if score @e[type=minecraft:wither,limit=1,sort=nearest] wtime matches 3 run function wither:wither/midpoint/midpoint1
-execute at @e[type=minecraft:blaze,tag=wArcher] run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0 0 0 0 0 normal
+execute as @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=midpointpos] at @s unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock unless block ~ ~6 ~ minecraft:bedrock run tp @s ^ ^1 ^ ~20 ~
 
 schedule function wither:wither/midpoint/midpointtick 1t

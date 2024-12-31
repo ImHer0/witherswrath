@@ -1,9 +1,8 @@
 scoreboard objectives remove Health
 scoreboard objectives remove wcharge1
-scoreboard objectives remove wtime
-scoreboard objectives remove smoke
 scoreboard objectives remove witherCount
 scoreboard objectives remove checkHealth
+scoreboard objectives remove wticktime
 
 advancement revoke @a only wither:wither/defeated_skeleton
 advancement revoke @a only wither:wither/defeated_wither
@@ -22,7 +21,6 @@ kill @e[type=item_display,tag=nether_star,limit=1]
 kill @e[tag=wSkel]
 kill @e[tag=wArcher]
 kill @e[type=armor_stand,tag=hStand]
-kill @e[type=armor_stand,tag=poswi]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
 kill @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1,tag=]

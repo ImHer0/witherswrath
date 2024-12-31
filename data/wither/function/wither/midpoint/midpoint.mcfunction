@@ -1,37 +1,47 @@
 # TIME
-time add 100t
+time add 1000t
 gamerule doDaylightCycle true
 weather clear
 
 # ONE-TIME ONLY: Removing this tag will stop the adv from triggering
 tag @s remove Wither
 
-# BREAK
+# FUNCTIONS
 schedule function wither:wither/midpoint/midpoint2 2s
 schedule function wither:wither/midpoint/midpoint3 5s
+schedule function wither:wither/midpoint/midpointtick 1t
+schedule function wither:wither/midpoint/midpointparttick 4t
+
+# GO UP GO DOWN 
+execute at @e[type=wither,limit=1,sort=nearest] run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["midpointpos"],attributes:[{id:"minecraft:scale",base:2}]}
+
+# BREAK BOX + SFX
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggledestruction:1} run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.break_block block @a[distance=..30] ~ ~ ~ 0.5 .1
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.wither_skeleton.hurt hostile @a[distance=..30] ~ ~ ~ 0.5 0.1
 
 # SUMMON WITHER SKELETONS
-execute at @e[type=player,distance=..50] run summon wither_skeleton ^ ^5 ^.5 {DeathLootTable: "wither:entities/withermobs", attributes:[{id:"minecraft:max_health",base:80}], Health: 80f}
-execute as @e[type=wither,limit=1,sort=nearest] run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100}]}
-execute as @e[type=wither,limit=1,sort=nearest] run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon blaze ~ ~3 ~ {DeathLootTable: "wither:entities/withermobs", Motion: [1.8d, 2d, 0d], Invulnerable: 1b, Tags: ["wArcher"], Health:60f,Passengers:[{id:"minecraft:wither_skeleton", Tags: ["wArcher"],DeathLootTable: "wither:entities/withermobs",Health:55f,HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:55},{id:"minecraft:safe_fall_distance",base:100},{id:"minecraft:scale",base:1.25}]}],attributes:[{id:"minecraft:max_health",base:60},{id:"minecraft:scale",base:0.8}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon blaze ~ ~3 ~ {DeathLootTable: "wither:entities/withermobs", Motion: [0d, 2d, 1.8d], Invulnerable: 1b, Tags: ["wArcher"], Health:60f,Passengers:[{id:"minecraft:wither_skeleton", Tags: ["wArcher"],DeathLootTable: "wither:entities/withermobs",Health:55f,HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:55},{id:"minecraft:safe_fall_distance",base:100},{id:"minecraft:scale",base:1.25}]}],attributes:[{id:"minecraft:max_health",base:60},{id:"minecraft:scale",base:0.8}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon blaze ~ ~3 ~ {DeathLootTable: "wither:entities/withermobs", Motion: [-1.8d, 2d, 0d], Invulnerable: 1b, Tags: ["wArcher"], Health:60f,Passengers:[{id:"minecraft:wither_skeleton", Tags: ["wArcher"],DeathLootTable: "wither:entities/withermobs",Health:55f,HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:55},{id:"minecraft:safe_fall_distance",base:100},{id:"minecraft:scale",base:1.25}]}],attributes:[{id:"minecraft:max_health",base:60},{id:"minecraft:scale",base:0.8}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon blaze ~ ~3 ~ {DeathLootTable: "wither:entities/withermobs", Motion: [0d, 2d, -1.8d], Invulnerable: 1b, Tags: ["wArcher"], Health:60f,Passengers:[{id:"minecraft:wither_skeleton", Tags: ["wArcher"],DeathLootTable: "wither:entities/withermobs",Health:55f,HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:55},{id:"minecraft:safe_fall_distance",base:100},{id:"minecraft:scale",base:1.25}]}],attributes:[{id:"minecraft:max_health",base:60},{id:"minecraft:scale",base:0.8}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @e[type=player,distance=..20] run summon area_effect_cloud ~ ~ ~ {Particle:{type:"smoke"},ReapplicationDelay:2,Radius:3f,RadiusPerTick:-.005f,RadiusOnUse:-.05f,Duration:200,potion_contents:{custom_effects:[{id:"minecraft:wither",amplifier:2,duration:80},{id:"minecraft:nausea",amplifier:1,duration:40,show_particles:0b}]}}
-effect give @e[type=minecraft:wither_skeleton,distance=..50] minecraft:speed infinite 4
+execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
+execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
+execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
+execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
+execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
 
-# EXPLOSION PURGE
-execute as @e[type=minecraft:wither] at @s run effect give @e[type=minecraft:wither] resistance 1 100 true
+# SUMMON BLAZES
+schedule function wither:wither/midpoint/spawns/blaze1 5t
+schedule function wither:wither/midpoint/spawns/blaze4 8t
+schedule function wither:wither/midpoint/spawns/blaze8 11t
+schedule function wither:wither/midpoint/spawns/blaze2 14t
+schedule function wither:wither/midpoint/spawns/blaze5 17t
+schedule function wither:wither/midpoint/spawns/blaze6 20t
+schedule function wither:wither/midpoint/spawns/blaze9 23t
+schedule function wither:wither/midpoint/spawns/blaze3 26t
+schedule function wither:wither/midpoint/spawns/blaze7 29t
+schedule function wither:wither/midpoint/spawns/blaze10 31t
 
 # SPECIAL FX
-scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] smoke 1
-scoreboard players set @e[type=minecraft:wither,limit=1,sort=nearest] wtime 3
 effect give @e[type=wither_skeleton,distance=..20] resistance 3 10
-data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {NoAI: 1b, Invulnerable: 1b, active_effects:[{id:"minecraft:resistance",amplifier:255,duration:5}]}
+data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Invulnerable:1b,NoAI:1b,NoGravity:1b,active_effects:[{id:"minecraft:resistance",amplifier:255,duration:5}]}
 
 
-# EFFECTS
-execute as @e[type=wither,limit=1,sort=nearest] at @e[type=player,distance=..100] run playsound minecraft:ambient.basalt_deltas.mood hostile @e[type=player,distance=..100]
-execute as @e[type=wither,limit=1,sort=nearest] at @e[type=player,distance=..100] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
-execute at @e[type=wither,limit=1,sort=nearest] at @e[type=player,distance=..100] run playsound minecraft:ambient.nether_wastes.additions ambient @e[type=player,distance=..100]
+
