@@ -1,8 +1,24 @@
-# Wither's Wrath
+<div align="center">
+  <img src="https://cdn.modrinth.com/data/cached_images/8d5aaaefc87dc119197586f7725d20513ee9e2ae.png" alt="Logo" width="500">
+</div>
+<br><br>
 
-Welcome to my github page where you can suggest and report errors on my datapack, as well as check current development!
 
-This is my iteration at the wither to make it more of a challenge with brand new attack formats as well as adding the 600HP from the wither in bedrock edition, because not everyone likes all the additions etc, I added slight toggles to both reduce the amount of chaos, but there will not be an easier version of the wither. I've been making this Wither as an attempt to make a harder Wither and mainly just showcasing it to friends therefore I never intended it to be perfect
+
+This is my take on the Wither, designed to make it more of a challenge by introducing brand-new attack patterns and increasing its health to 600 HP, matching the Bedrock Edition Wither. Since not everyone enjoys all the changes, I've included toggles to reduce chaos for more flexibility. However, there will be no "easy" version of this Wither. 
+
+This Wither was created as a personal project to present a tougher fight and primarily to showcase it to friends. It was never meant to be perfect, but I hope it brings a fun challenge.
+
+<br>
+
+---
+
+**This pack was designed for Minecraft version 1.21 and up.**
+
+---
+
+---
+
 
 <details>
 <summary>What does this wither Include?</summary>
@@ -44,26 +60,37 @@ and More!
 
 </details>
 
----
-
-If you have any ideas, please leave them in the comments as I might use them if I think they'll be a good addition even if it's just a different thing to the data pack.
-
-This pack was made for 1.21 and up
-
-### There are multiple new features in this wither but to help customize it I've added some toggles (more coming soon)
-
-#### Toggle Options: [ /function wither:config ]
-
-#### This Wither is quite destructive when it comes to environment ~~so doing /gamerule mobgriefing false~~ (You can use the Config command above to disable it!)
-
-<details>
-
-<summary>Destruction after fighting the wither with 6 people</summary>
-
-![image](https://imgur.com/j9Easm0.gif)
-
-</details>
 
 ---
 
-### If you're using this in a server please tell me of any impacts in performance it may have since I've not tested this for myself with enough players to notice performance changes
+<br>
+
+### **Toggle Options**  
+To configure settings, use the following command:  
+`/function wither:config`
+
+> ⚠️ **Warning:**  
+> This Wither is highly destructive. Fight it far from your base, or toggle the option to disable destructive features.
+
+<br>
+
+---
+
+<br>
+
+### **Links**  
+Click below to view or download the data pack in other platforms:  
+
+[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ImHer0/witherswrath)  
+[![Modrinth](https://img.shields.io/badge/Modrinth-3FCC9A?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/datapack/witherswrath/)  
+[![PlanetMinecraft](https://img.shields.io/badge/Planet%20Minecraft-2E9FFF?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.planetminecraft.com/data-pack/wither-s-wrath/)
+
+<br>
+
+---
+
+### **Server Usage**  
+If you're using this on a server, I’d appreciate feedback on any potential performance impacts. Due to limited testing with larger player groups, there might be areas needing optimisation.
+
+### **Permissions**  
+Feel free to use this in any packs, modify it, and make it look more polished or fancy!
