@@ -1,6 +1,6 @@
 # Ran by midpoint 2 after 10 ticks
 
-execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {CustomName: '"The Wither\'s Instability"', ExplosionRadius: 10, Invulnerable: 1b, Fuse: 0, ignited: 1b, Silent: 1b, attributes:[{id:"minecraft:scale",base:0.09}]}
+execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {CustomName: '"The Wither\'s Instability"', ExplosionRadius: 10, Invulnerable: 1b, Fuse: 0, ignited: 1b, Silent: 1b, attributes:[{id:"minecraft:scale",base:0.0625}]}
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomName: '{"color":"#d7bfff","text":"Wither"}', CustomNameVisible: 0b, NoAI: 0b}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:lightning_bolt ~ ~ ~
 

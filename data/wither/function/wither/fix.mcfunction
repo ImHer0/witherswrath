@@ -15,8 +15,11 @@ advancement revoke @a only wither:wither/summoned_wither
 
 data remove storage temp Head
 
+stopsound @a record
+
 tp @e[type=wither] ~ -100 ~
 kill @e[type=wither]
+kill @e[type=wither_skull]
 kill @e[type=item_display,tag=nether_star,limit=1]
 kill @e[tag=wSkel]
 kill @e[tag=wArcher]

@@ -3,5 +3,8 @@
     "toggledestruction": 1,
     "togglehoming": 1,
     "togglecharge": 1,
+    "togglespawns": 1,
+    "toggleboomtp": 1,
+    "toggledash": 1,
     "initialized": 0
 }

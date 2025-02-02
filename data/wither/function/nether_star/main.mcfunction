@@ -12,6 +12,7 @@
 
 
 # EFFECTS
+    execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run playsound minecraft:wither.death hostile @a ~ ~ ~ 1 1
     execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run particle minecraft:soul ~ ~ ~ 0 0.5 0 0.07 220 normal
     execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run particle minecraft:soul ~ ~1 ~ 0 1 0 0.04 80 normal
     execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run playsound minecraft:particle.soul_escape master @e[type=player,distance=..100] ~ ~ ~ 100 0.1 1

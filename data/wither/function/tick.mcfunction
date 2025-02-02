@@ -1,5 +1,5 @@
 
-# GETS HEALTH EVERY TICK
+# CHECKS HEALTH EVERY TICK
 execute at @p as @e[type=minecraft:wither,limit=1,sort=nearest] store result score @s checkHealth run data get entity @s Health
 execute at @p as @e[type=minecraft:wither,limit=1,sort=furthest] store result score @s checkHealth run data get entity @s Health
 execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run data get entity @s Health

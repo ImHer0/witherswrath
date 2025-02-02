@@ -9,15 +9,13 @@ team add Wither
 team modify Wither nametagVisibility never
 
 
-
-
 # ASTHETICS
 weather thunder
 gamerule doFireTick false
 gamerule doDaylightCycle false
 execute if data storage wither:options {toggledestruction:0} run gamerule mobGriefing false
 
-# TIME SET NIGHT
+# TIME SET NIGHT Without the day reset ;)
 
 execute store result score wticktime wticktime run time query daytime
 execute if score wticktime wticktime matches 1..1000 run time add 21000
@@ -46,6 +44,7 @@ execute if score wticktime wticktime matches 23001..24000 run time add 22500
 
 
 stopsound @a music
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:wither.10sec record @a[distance=..100] ~ ~ ~ 1 1
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:music.nether.basalt_deltas music @a[distance=..100] ~ ~-2 ~ 2
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @e[type=player,distance=..100] run playsound minecraft:entity.parrot.imitate.wither hostile @a ~ ~ ~ 2 0.1
 

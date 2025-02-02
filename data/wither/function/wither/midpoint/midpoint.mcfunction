@@ -20,13 +20,6 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.break_block block @a[distance=..30] ~ ~ ~ 0.5 .1
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.wither_skeleton.hurt hostile @a[distance=..30] ~ ~ ~ 0.5 0.1
 
-# SUMMON WITHER SKELETONS
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
-execute as @e[type=wither,limit=1,sort=nearest] at @s run summon wither_skeleton ~ ~ ~ {DeathLootTable: "wither:entities/withermobs", Health:100f, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:chainmail_chestplate",count:1},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F],attributes:[{id:"minecraft:max_health",base:100},{id:"minecraft:movement_speed",base:0.35},{id:"minecraft:step_height",base:0.99}]}
-
 # SUMMON BLAZES
 schedule function wither:wither/midpoint/spawns/blaze1 5t
 schedule function wither:wither/midpoint/spawns/blaze4 8t
@@ -40,6 +33,10 @@ schedule function wither:wither/midpoint/spawns/blaze7 29t
 schedule function wither:wither/midpoint/spawns/blaze10 31t
 
 # SPECIAL FX
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.spawn hostile @a[distance=..30] ~ ~ ~ 2 .8
+schedule clear wither:wither/musicphase1
+execute as @a run stopsound @a record minecraft:wither.phase1
+function wither:wither/musicphase2
 effect give @e[type=wither_skeleton,distance=..20] resistance 3 10
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Invulnerable:1b,NoAI:1b,NoGravity:1b,active_effects:[{id:"minecraft:resistance",amplifier:255,duration:5}]}
 

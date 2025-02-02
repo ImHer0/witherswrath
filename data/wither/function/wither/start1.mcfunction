@@ -7,3 +7,4 @@ execute as @e[type=minecraft:wither] at @s run particle minecraft:lava ~ ~ ~ 3 3
 scoreboard players set wspawn spawn 0
 execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 schedule clear wither:wither/fight_startpart
+schedule function wither:wither/musicphase1 1t
