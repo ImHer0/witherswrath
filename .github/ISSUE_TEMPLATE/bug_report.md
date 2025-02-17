@@ -8,7 +8,7 @@ assignees: ImHer0
 ---
 
 **Version and Format (i.e. V1.10 | Datapack):**
-To understand where the problem is occuring
+To understand where the problem is occurring
 
 **Describe the bug**
 A clear and concise description of what the bug is.
