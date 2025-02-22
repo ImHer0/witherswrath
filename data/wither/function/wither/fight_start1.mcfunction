@@ -4,10 +4,10 @@ scoreboard objectives add wcharge1 dummy
 scoreboard objectives add spawn dummy
 scoreboard objectives add wticktime dummy
 
-
 team add Wither
 team modify Wither nametagVisibility never
 
+function wither:wither/fight_startparttrail
 
 # ASTHETICS
 weather thunder

@@ -1,5 +1,5 @@
 
-function wither:wither/skull
+
 
 # PREVENTS MORE THAN 1 WITHER ALIVE
 execute unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 0 run function wither:wither/check
@@ -23,6 +23,5 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:w
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:blaze,distance=..40] run team join Wither
     # This one is for mobs in water (basically any sea creature)
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=!player,distance=..200] if block ~ ~ ~ minecraft:water run team join Wither
-
 
 schedule function wither:5tick 5t

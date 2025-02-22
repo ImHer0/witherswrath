@@ -12,7 +12,6 @@ advancement revoke @a only wither:wither/hit3_wither
 advancement revoke @a only wither:wither/prehit_wither
 advancement revoke @a only wither:wither/summoned_wither
 
-
 data remove storage temp Head
 
 stopsound @a record
@@ -26,7 +25,7 @@ kill @e[tag=wArcher]
 kill @e[type=armor_stand,tag=hStand]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
-kill @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1,tag=]
+execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1,tag=] run kill @e[type=experience_orb,sort=nearest,distance=..10]
 
 execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 
