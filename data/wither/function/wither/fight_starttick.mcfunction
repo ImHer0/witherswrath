@@ -1,4 +1,4 @@
-# FUTURE USE CASES
+# for the absorption particles thingy (trails)
 
 function wither:wither/fight_startpreparttrail
 

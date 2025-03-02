@@ -6,5 +6,6 @@
     "togglespawns": 1,
     "toggleboomtp": 1,
     "toggledash": 1,
+    "toggleanimation": 0,
     "initialized": 0
 }

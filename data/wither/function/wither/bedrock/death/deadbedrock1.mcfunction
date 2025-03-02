@@ -1,0 +1,1 @@
+data merge entity @e[type=wither,limit=1] {NoGravity:1b,Invulnerable:1b}
