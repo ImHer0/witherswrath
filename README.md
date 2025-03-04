@@ -60,6 +60,14 @@ and More!
 
 </details>
 
+<details>
+<summary>How to enable Bedrock Mode</summary>
+
+
+https://github.com/user-attachments/assets/58b41e93-03e0-4469-af28-27580a54e916
+
+
+</details>
 
 ---
 
