@@ -1,1 +1,2 @@
-execute if data storage wither:options {toggledestruction:1} at @s run summon tnt ~ ~ ~
+execute as @e[type=wither,limit=1,sort=nearest] at @s if data storage wither:options {toggledestruction:1} at @s run summon tnt ~ ~ ~
+execute as @e[type=wither,limit=1,sort=nearest] at @s if data storage wither:options {toggledestruction:1} at @s run particle minecraft:explosion_emitter
