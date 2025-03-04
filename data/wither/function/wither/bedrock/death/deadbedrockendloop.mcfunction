@@ -8,6 +8,7 @@ execute at @e[type=armor_stand,tag=wither_stasis] run playsound minecraft:entity
 execute at @e[type=armor_stand,tag=wither_stasis] run playsound minecraft:entity.dragon_fireball.explode hostile @e[type=minecraft:player] ~ ~ ~ 1 .9
 kill @e[type=armor_stand,tag=wither_stasis]
 
+
 schedule clear wither:wither/bedrock/death/deadbedrock1t
 schedule clear wither:wither/bedrock/death/deadbedrock2t
 schedule clear wither:wither/bedrock/death/deadbedrock3t

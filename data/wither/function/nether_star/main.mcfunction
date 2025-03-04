@@ -9,7 +9,7 @@
     execute if data storage wither:options {toggleanimation:0} as @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1] at @s unless block ~ ~-0.7 ~ air run tp @s ~ ~.75 ~
     execute if data storage wither:options {toggleanimation:0} as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}}] at @s run data merge entity @s {PickupDelay:20, Invulnerable: 1b, Tags: ["nether_star"], NoGravity:1b}
     execute if data storage wither:options {toggletrophy:1} at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1] run function wither:nether_star/trophy
-    
+    execute if data storage wither:options {toggleanimation:2} as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}}] at @s run data merge entity @s {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:nether_star",count:1}}
 
 
 # EFFECTS

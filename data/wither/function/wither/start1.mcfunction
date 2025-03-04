@@ -11,7 +11,7 @@ execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 # End loops etc
 
 execute if data storage wither:options {toggleanimation:2} run data merge entity @e[type=wither,limit=1] {Glowing:0b}
-execute if data storage wither:options {toggleanimation:2} at @e[type=wither,limit=1] run playsound minecraft:entity.generic.explode hostile @e[type=player] ~ ~ ~ 1 1
+execute if data storage wither:options {toggleanimation:2} at @e[type=wither,limit=1] run playsound minecraft:entity.generic.explode hostile @e[type=player,distance=..50] ~ ~ ~ 1 1
 kill @e[type=armor_stand,tag=wither_spin,limit=1]
 schedule clear wither:wither/fight_start_bedrock1t
 schedule clear wither:wither/fight_startpart
