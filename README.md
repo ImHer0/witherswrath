@@ -84,7 +84,7 @@ Click below to view or download the data pack in other platforms:
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ImHer0/witherswrath)  
 [![Modrinth](https://img.shields.io/badge/Modrinth-3FCC9A?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/datapack/witherswrath/)  
 [![PlanetMinecraft](https://img.shields.io/badge/Planet%20Minecraft-2E9FFF?style=for-the-badge&logo=anycubic&logoColor=white)](https://www.planetminecraft.com/data-pack/wither-s-wrath/)<br>
-[![CurseForge](https://img.shields.io/badge/CurseForge-f16e34?style=for-the-badge&logo=curseforge&logoColor=white)]() 
+[![CurseForge](https://img.shields.io/badge/CurseForge-f16e34?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/data-packs/withers-wrath) 
 
 <br>
 
