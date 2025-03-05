@@ -6,14 +6,14 @@
    ________               __    __    
   |  |  |  |.----..---.-.|  |_ |  |--.
   |  |  |  ||   _||  _  ||   _||     |
-  |________||__|  |___._||____||__|__| V1.10
+  |________||__|  |___._||____||__|__| V1.11
                                       
 
 Heyo!
 
 If you're reading this it means you're either trying to edit something or inspecting the datapack.
 
-If you're looking to change the default settings of this datapack please go to data/wither/storage/options.json and open with a text editing app.
+If you're looking to change the default settings of this datapack please go to data/wither/function/initialize_Storage and open with a text editing app.
 !!! DO NOT change the initialized option as this is what the datapack uses to add the default values.
 All the different toggles will have the prefix "toggle" before the different options
 
