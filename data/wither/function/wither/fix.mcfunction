@@ -29,6 +29,7 @@ tp @e[type=wither] ~ -200 ~
 kill @e[type=wither]
 kill @e[type=wither_skull]
 kill @e[type=item_display,tag=nether_star]
+kill @e[tag=wither_dash]
 kill @e[tag=wSkel]
 kill @e[tag=wArcher]
 kill @e[type=armor_stand,tag=hStand]

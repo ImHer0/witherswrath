@@ -3,4 +3,4 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] run tp @s @e[type=armo
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.parrot.imitate.wither hostile @e[type=minecraft:player] ~ ~ ~ 1 .8
 
 
-schedule function wither:wither/bedrock/death/deadbedrock1t 5t
+schedule function wither:wither/bedrock/death/deadbedrock2t 1t

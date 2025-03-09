@@ -12,9 +12,6 @@ schedule clear wither:wither/homing/homingpre
 
 schedule function wither:wither/bedrock/death/deadbedrock1 1t
 
-schedule function wither:wither/bedrock/death/deadbedrock1t 3t
-schedule function wither:wither/bedrock/death/deadbedrock2t 5t
-schedule function wither:wither/bedrock/death/deadbedrock3t 7t
-schedule function wither:wither/bedrock/death/deadbedrock4t 9t
+schedule function wither:wither/bedrock/death/deadbedrock1t 1t
 
 schedule function wither:wither/bedrock/death/deadbedrockendloop 10s

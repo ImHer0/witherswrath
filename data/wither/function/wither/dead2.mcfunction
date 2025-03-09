@@ -23,8 +23,9 @@ scoreboard players set witherCount witherCount 0
 
 # PEACE
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=wither_skeleton,distance=..100]
-    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wSkel,distance=..100]
-    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wArcher,distance=..200]
+    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wSkel]
+    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wither_dash]
+    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wArcher]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=zombie,distance=..80]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=creeper,distance=..80]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=armor_stand,tag=hStand,distance=..100]
