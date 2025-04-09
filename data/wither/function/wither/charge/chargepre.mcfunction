@@ -9,7 +9,7 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraf
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:player,distance=..30] at @s run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 1 .7
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:player,distance=..30] at @s run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 1 .6
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.wither.death hostile @e[distance=..32,type=player] ~ ~ ~ 0.8 2
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] run effect give @s minecraft:resistance 3 255
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] run data merge entity @s {active_effects:[{id:"minecraft:resistance",amplifier:255,duration:60,show_particles:0b}]}
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Glowing:1b}
 
 # PREVENT 1 SHOTTING PLAYERS

@@ -14,7 +14,7 @@ execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither
 
 # /summon minecraft:cow ~ ~ ~ {DeathLootTable:"wither:entities/wither"}
 
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}] at @s run tellraw @e[type=player,distance=..50] ["",{"text":"The Wither has been killed by something...","italic":true,"color":"yellow"}]
+execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}] at @s run tellraw @e[type=player,distance=..50] ["",{"text":"The Wither has been killed by something...","italic":true,color:"yellow"}]
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}] at @s run function wither:wither/fix
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}]
 

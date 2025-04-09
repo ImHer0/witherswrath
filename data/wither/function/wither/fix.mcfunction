@@ -41,4 +41,4 @@ execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 
 function wither:load
 
-tellraw @s {"text":"Wither's Wrath has been fixed!","bold":true,"color":"#5e0000"}
+tellraw @s {"text":"Wither's Wrath has been fixed!",bold:true,color:"#5e0000"}
