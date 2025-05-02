@@ -3,11 +3,12 @@ scoreboard objectives add Health dummy
 scoreboard objectives add wcharge1 dummy
 scoreboard objectives add spawn dummy
 scoreboard objectives add wticktime dummy
+scoreboard objectives add wchargereset dummy
+scoreboard objectives add wenraged dummy
 
 team add Wither
 team modify Wither nametagVisibility never
 
-function wither:wither/fight_startparttrail
 
 # ASTHETICS
 execute if data storage wither:options {toggleanimation:0} run weather thunder
@@ -69,7 +70,7 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] run team join Wither @
 # MODIFICATIONS
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run effect give @e[type=player,distance=..100] minecraft:darkness 8 1 true
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run effect give @e[type=!player,type=!wither,distance=..100] minecraft:weakness 600 5 true
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {DeathLootTable:"wither:entities/wither",Health:600f,Tags:["Bedrock","Charge","Wither","Dash"],ArmorItems:[{id:"minecraft:leather_boots",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}},"minecraft:unbreakable":{}}},{id:"minecraft:iron_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:iron_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],attributes:[{id:"minecraft:generic.follow_range",base:69},{id:"minecraft:generic.knockback_resistance",base:0.5},{id:"minecraft:generic.max_health",base:600},{id:"minecraft:generic.movement_speed",base:2},{id:"minecraft:generic.step_height",base:2},{id:"minecraft:generic.flying_speed",base:5}]}
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {Health:600f,Tags:["Bedrock","Charge","Wither","Dash"],ArmorItems:[{id:"minecraft:leather_boots",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}},"minecraft:unbreakable":{}}},{id:"minecraft:iron_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:iron_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],attributes:[{id:"minecraft:generic.follow_range",base:69},{id:"minecraft:generic.knockback_resistance",base:0.5},{id:"minecraft:generic.max_health",base:600},{id:"minecraft:generic.movement_speed",base:2},{id:"minecraft:generic.step_height",base:2},{id:"minecraft:generic.flying_speed",base:5}]}
 
 
 function wither:wither/convert
