@@ -12,12 +12,8 @@ execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither
 execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/homing/homingpre
 execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/spawn
 
-# /summon minecraft:cow ~ ~ ~ {DeathLootTable:"wither:entities/wither"}
-
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}] at @s run tellraw @e[type=player,distance=..50] ["",{"text":"The Wither has been killed by something...","italic":true,color:"yellow"}]
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}] at @s run function wither:wither/fix
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{WitherFix:1b}}}}]
 
 # WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
 
 execute as @e[type=wither,tag=!Wither] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
+execute as @e[type=wither,tag=!Dash] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
