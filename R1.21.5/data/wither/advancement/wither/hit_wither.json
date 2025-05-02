@@ -1,0 +1,15 @@
+{
+  "rewards": {
+    "function": "wither:wither/hit"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither"
+        }
+      }
+    }
+  }
+}
