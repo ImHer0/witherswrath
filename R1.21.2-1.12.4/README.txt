@@ -6,7 +6,7 @@
    ________               __    __    
   |  |  |  |.----..---.-.|  |_ |  |--.
   |  |  |  ||   _||  _  ||   _||     |
-  |________||__|  |___._||____||__|__| V1.11
+  |________||__|  |___._||____||__|__| V1.12
                                       
 
 Heyo!
@@ -21,3 +21,7 @@ All the different toggles will have the prefix "toggle" before the different opt
 
 PS. if you're planning to use this on a singleplayer or a server you don't need to change any files and can just do /function wither:config to change
 the values and it will save the values per world.
+
+Alternatively Check out where you downloaded this pack as there is now a Bedrock Default option and a Wither's Wrath
+  - The Bedrock version includes:
+    Bedrock Parity making it as close as possible without any of the extra stuff.

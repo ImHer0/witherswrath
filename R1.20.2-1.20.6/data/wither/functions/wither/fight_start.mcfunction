@@ -5,6 +5,7 @@ advancement revoke @s only wither:wither/summoned_wither
 execute at @e[type=minecraft:player,limit=1,sort=random] as @s run scoreboard players add witherCount witherCount 1
 
 # FUNCTIONS
+execute if score witherCount witherCount matches 1 run schedule function wither:wither_check 5t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_start1 1t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/skull 10s
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_startpart 1t

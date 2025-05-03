@@ -3,6 +3,10 @@ scoreboard objectives remove wcharge1
 scoreboard objectives remove witherCount
 scoreboard objectives remove checkHealth
 scoreboard objectives remove wticktime
+scoreboard objectives remove wchargereset
+scoreboard objectives remove wenraged
+
+team remove Wither
 
 advancement revoke @a only wither:wither/defeated_skeleton
 advancement revoke @a only wither:wither/defeated_wither
@@ -35,7 +39,7 @@ kill @e[tag=wArcher]
 kill @e[type=armor_stand,tag=hStand]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
-execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1,tag=] run kill @e[type=experience_orb,sort=nearest,distance=..10]
+execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",Count:1b}},limit=1,tag=] run kill @e[type=experience_orb,sort=nearest,distance=..10]
 
 
 function wither:load

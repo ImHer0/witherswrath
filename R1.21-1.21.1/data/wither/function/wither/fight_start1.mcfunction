@@ -5,6 +5,7 @@ scoreboard objectives add spawn dummy
 scoreboard objectives add wticktime dummy
 scoreboard objectives add wchargereset dummy
 scoreboard objectives add wenraged dummy
+scoreboard objectives add witherCheck dummy
 
 team add Wither
 team modify Wither nametagVisibility never

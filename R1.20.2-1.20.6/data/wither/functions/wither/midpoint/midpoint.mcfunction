@@ -17,7 +17,7 @@ execute if data storage wither:options {toggleanimation:2} as @e[type=wither,lim
 execute if data storage wither:options {toggleanimation:2} as @e[type=wither,limit=1,sort=nearest] run schedule function wither:wither/midpoint/midpointbedrock 10t
 
 # GO UP GO DOWN 
-execute if data storage wither:options {toggleanimation:0} at @e[type=wither,limit=1,sort=nearest] run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["midpointpos"],Attributes:[{Name:"minecraft:generic.scale",Base:2}]}
+execute if data storage wither:options {toggleanimation:0} at @e[type=wither,limit=1,sort=nearest] run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["midpointpos"]}
 
 # BREAK BOX + SFX
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} if data storage wither:options {toggledestruction:1} run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace

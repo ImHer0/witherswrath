@@ -12,7 +12,7 @@ execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither
 execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/homing/homingpre
 execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/spawn
 
-
 # WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
 
 execute as @e[type=wither,tag=!Wither] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
+execute as @e[type=wither,tag=!Dash] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f

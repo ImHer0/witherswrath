@@ -3,6 +3,10 @@ scoreboard objectives remove wcharge1
 scoreboard objectives remove witherCount
 scoreboard objectives remove checkHealth
 scoreboard objectives remove wticktime
+scoreboard objectives remove wchargereset
+scoreboard objectives remove wenraged
+
+team remove Wither
 
 advancement revoke @a only wither:wither/defeated_skeleton
 advancement revoke @a only wither:wither/defeated_wither

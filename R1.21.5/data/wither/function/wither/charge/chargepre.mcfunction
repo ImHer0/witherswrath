@@ -20,5 +20,3 @@ execute unless score enraged wenraged matches 1 run schedule function wither:wit
 
 execute if score enraged wenraged matches 1 run schedule function wither:wither/charge/charge 10t
 execute if score enraged wenraged matches 1 run schedule function wither:wither/charge/chargetick 10t
-
-

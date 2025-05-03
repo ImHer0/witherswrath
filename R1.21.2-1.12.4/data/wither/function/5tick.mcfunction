@@ -24,4 +24,7 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:b
     # This one is for mobs in water (basically any sea creature)
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=!player,distance=..200] if block ~ ~ ~ minecraft:water run team join Wither
 
+execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle minecraft:mycelium ~ ~1 ~ 1 1 1 0 1500 normal
+execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle trial_omen ~ ~1 ~ 1 1 1 2 10 normal
+
 schedule function wither:5tick 5t

@@ -15,5 +15,10 @@ data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Glowing:1b}
 # PREVENT 1 SHOTTING PLAYERS
 effect give @e[type=player] minecraft:resistance 5 0
 
-schedule function wither:wither/charge/charge 30t
-schedule function wither:wither/charge/chargetick 30t
+execute unless score enraged wenraged matches 1 run schedule function wither:wither/charge/charge 30t
+execute unless score enraged wenraged matches 1 run schedule function wither:wither/charge/chargetick 30t
+
+execute if score enraged wenraged matches 1 run schedule function wither:wither/charge/charge 10t
+execute if score enraged wenraged matches 1 run schedule function wither:wither/charge/chargetick 10t
+
+

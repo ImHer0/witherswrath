@@ -3,6 +3,9 @@ scoreboard objectives add Health dummy
 scoreboard objectives add wcharge1 dummy
 scoreboard objectives add spawn dummy
 scoreboard objectives add wticktime dummy
+scoreboard objectives add wchargereset dummy
+scoreboard objectives add wenraged dummy
+scoreboard objectives add witherCheck dummy
 
 team add Wither
 team modify Wither nametagVisibility never
@@ -62,14 +65,14 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] unless block ^ ^ ^1 mi
 # ASCEND
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} if entity @e[type=player,distance=..30] as @s at @s run particle sculk_soul ~ ~1 ~ 0.5 .35 0.5 0.1 50 normal
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run particle minecraft:sculk_soul ~ ~ ~ 15 0 15 0.000000000000000000001 1000 normal
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run particle dust_color_transition{from_color:[0.169,0.169,0.169],scale:4,to_color:[0.941,0.941,0.902]} ~ ~.8 ~ 0.9 1.2 0.9 0.001 100 normal
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run particle minecraft:cloud ~ ~.8 ~ 0.9 1.2 0.9 0.001 100 normal
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:levitation",amplifier:3,duration:140,show_particles:0b},{id:"minecraft:slow_falling",amplifier:20,duration:400,show_particles:0b}]}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] run team join Wither @s
 
 # MODIFICATIONS
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run effect give @e[type=player,distance=..100] minecraft:darkness 8 1 true
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:0} run effect give @e[type=!player,type=!wither,distance=..100] minecraft:weakness 600 5 true
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {DeathLootTable:"wither:entities/wither",Health:600f,Tags:["Bedrock","Charge","Wither","Dash"],ArmorItems:[{id:"minecraft:leather_boots",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}},"minecraft:unbreakable":{}}},{id:"minecraft:iron_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:iron_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:"minecraft:generic.follow_range",Base:69},{Name:"minecraft:generic.knockback_resistance",Base:0.5},{Name:"minecraft:generic.max_health",Base:600},{Name:"minecraft:generic.movement_speed",Base:2},{Name:"minecraft:generic.step_height",Base:2},{Name:"minecraft:generic.flying_speed",Base:5}]}
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {Health:600f,Tags:["Bedrock","Charge","Wither","Dash"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,components:{"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}},"minecraft:unbreakable":{}}},{id:"minecraft:iron_leggings",Count:1b,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:iron_chestplate",Count:1b,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}},{id:"minecraft:leather_helmet",Count:1b,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}}}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,-327.670F],Attributes:[{Name:"minecraft:generic.follow_range",Base:69},{Name:"minecraft:generic.knockback_resistance",Base:0.5},{Name:"minecraft:generic.max_health",Base:600},{Name:"minecraft:generic.movement_speed",Base:2},{Name:"minecraft:generic.step_height",Base:2},{Name:"minecraft:generic.flying_speed",Base:5}]}
 
 
 function wither:wither/convert

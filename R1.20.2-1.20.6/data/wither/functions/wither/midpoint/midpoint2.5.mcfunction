@@ -1,7 +1,7 @@
 # Ran by midpoint 2 after 10 ticks
 
-execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {CustomName: '"The Wither\'s Instability"', ExplosionRadius: 10, Invulnerable: 1b, Fuse: 0, ignited: 1b, Silent: 1b, Attributes:[{Name:"minecraft:generic.scale",Base:0.0625}]}
-data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomName: '{"color":"#d7bfff","text":"Wither"}', CustomNameVisible: 0b, NoAI: 0b}
+execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {CustomName: '"The Wither\'s Instability"', ExplosionRadius: 10, Invulnerable: 1b, Fuse: 0, ignited: 1b, Silent: 1b, }
+data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomNameVisible: 0b, NoAI: 0b, Attributes:[{Name:"minecraft:generic.armor",Base:5},{Name:"minecraft:generic.armor_toughness",Base:5}]}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:lightning_bolt ~ ~ ~
 
 execute at @e[type=wither,limit=1,sort=nearest] as @e[type=player,distance=..100] run playsound minecraft:entity.wither.spawn hostile @e[type=player,distance=..100] ~ ~ ~ 1 .6
