@@ -4,5 +4,7 @@ scoreboard objectives add checkHealth dummy
 scoreboard objectives add witherCheck dummy
 function wither:wither/safemode
 
-execute unless data storage wither:options {initialized:1} run function wither:initialize_storage
+
+# prevents storage from being set if already initialized previously (saves current settings if any)
+execute unless data storage wither:options {initialized:2} run function wither:initialize_storage
 

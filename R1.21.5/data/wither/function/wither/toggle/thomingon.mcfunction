@@ -1,3 +1,3 @@
-data modify storage wither:options togglehoming set value 1
+data modify storage wither:options togglehoming set value Enabled
 
-schedule function wither:config 2s
+# Could make this show config again

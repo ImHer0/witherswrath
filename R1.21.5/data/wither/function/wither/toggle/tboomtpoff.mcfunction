@@ -1,3 +1,3 @@
-data modify storage wither:options toggleboomtp set value 0
+data modify storage wither:options toggleboomtp set value Disabled
 
-schedule function wither:config 2s
+# Could make this show config again

@@ -1,6 +1,10 @@
-   {
-       "pack": {
-           "pack_format": 61,
-           "description": "\u00A7f\u00A7lThe Wither Revamp!"
-       }
+{
+   "pack": {
+	   "pack_format": 57,
+	   "description": "\u00A7f\u00A7lThe Wither Revamp!",
+	   "supported_formats": [
+		  57,
+		  61
+		]
    }
+}

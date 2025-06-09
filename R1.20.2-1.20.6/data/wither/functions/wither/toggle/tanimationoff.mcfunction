@@ -1,4 +1,4 @@
-data modify storage wither:options toggleanimation set value 1
+data modify storage wither:options toggleanimation set value Disabled
 function wither:wither/toggle/tanimation
 
-schedule function wither:config 2s
+# Could make this show config again

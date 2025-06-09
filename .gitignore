@@ -1,2 +1,5 @@
 *.jar
 *.zip
+assets/
+Bedrock/
+r1.21.6/
