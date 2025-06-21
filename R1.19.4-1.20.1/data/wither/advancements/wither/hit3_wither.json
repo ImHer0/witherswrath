@@ -1,0 +1,16 @@
+{
+  "rewards": {
+    "function": "wither:wither/hit3"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither",
+          "nbt": "{Tags:[\"Charge\"]}"
+        }
+      }
+    }
+  }
+}

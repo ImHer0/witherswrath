@@ -1,5 +1,6 @@
 
 function wither:wither/skull
+execute as @e[type=minecraft:wither_skull,tag=buff,limit=1,tag=buff] run kill @s 
 
 # CHECKS HEALTH EVERY TICK
 execute at @p as @e[type=minecraft:wither,limit=1,sort=nearest] store result score @s checkHealth run data get entity @s Health
