@@ -19,7 +19,7 @@
     execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run playsound minecraft:particle.soul_escape master @e[type=player,distance=..100] ~ ~ ~ 100 0.1 1
     execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run playsound minecraft:particle.soul_escape master @e[type=player,distance=..100] ~ ~ ~ 30 1 1
     execute as @e[type=item,sort=nearest,tag=nether_star,limit=1] as @s at @s run playsound minecraft:particle.soul_escape master @e[type=player,distance=..100] ~ ~ ~ 30 1 1
-    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] if data storage wither:options {toggleanimation:Default} run summon minecraft:lightning_bolt ~ ~-2 ~
+    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] if data storage wither:options {toggleanimation:Default} run playsound entity.lightning_bolt.thunder ambient @e[type=player,distance=..50] ~ ~ ~ 1 .3
 
     
 

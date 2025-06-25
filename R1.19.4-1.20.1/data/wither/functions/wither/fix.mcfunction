@@ -5,6 +5,15 @@ scoreboard objectives remove checkHealth
 scoreboard objectives remove wticktime
 scoreboard objectives remove wchargereset
 scoreboard objectives remove wenraged
+scoreboard objectives remove skullposX
+scoreboard objectives remove skullposY
+scoreboard objectives remove skullposZ
+scoreboard objectives remove playerposX
+scoreboard objectives remove playerposY
+scoreboard objectives remove playerposZ
+scoreboard objectives remove skulllaunchmotX
+scoreboard objectives remove skulllaunchmotY
+scoreboard objectives remove skulllaunchmotZ
 
 team remove Wither
 

@@ -8,6 +8,7 @@ execute at @e[type=minecraft:player,limit=1,sort=random] as @s run scoreboard pl
 execute if score witherCount witherCount matches 1 run schedule function wither:wither_check 1t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_start1 1t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/skull 10s
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/launchskull 20s
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_startpart 1t
 execute if score witherCount witherCount matches 1 if data storage wither:options {togglehoming:Enabled} run schedule function wither:wither/homing/homingpre 10s
 execute if score witherCount witherCount matches 1 if data storage wither:options {togglespawns:Enabled} run schedule function wither:wither/spawn 15s

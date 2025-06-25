@@ -18,8 +18,7 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=!player,typ
 execute at @e[tag=wSkel] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 .03 10 force
 
 # PREVENT BOTH BLAZES AND WITHERS FROM TARGETING WITHER AND THE VICE VERSA
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:zombified_piglin,distance=..40] run team join Wither
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:wither_skeleton,distance=..40] run team join Wither
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=#wither_friends,distance=..40] run team join Wither
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:blaze,distance=..40] run team join Wither
     # This one is for mobs in water (basically any sea creature)
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=!player,distance=..200] if block ~ ~ ~ minecraft:water run team join Wither

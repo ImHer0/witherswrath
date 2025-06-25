@@ -2,6 +2,15 @@ scoreboard objectives add witherCount dummy
 scoreboard players set witherCount witherCount 0
 scoreboard objectives add checkHealth dummy
 scoreboard objectives add witherCheck dummy
+scoreboard objectives add skullposX dummy
+scoreboard objectives add skullposY dummy
+scoreboard objectives add skullposZ dummy
+scoreboard objectives add playerposX dummy
+scoreboard objectives add playerposY dummy
+scoreboard objectives add playerposZ dummy
+scoreboard objectives add skulllaunchmotX dummy
+scoreboard objectives add skulllaunchmotY dummy
+scoreboard objectives add skulllaunchmotZ dummy
 function wither:wither/safemode
 
 

@@ -10,9 +10,7 @@ execute at @e[type=wither,limit=1,sort=nearest] as @e[limit=1,sort=random,nbt={T
 
 
 # Skeleton variants to Wither Skeletons
-execute at @e[type=wither,limit=1,sort=nearest] as @e[type=skeleton,limit=1,sort=random,distance=..40] unless data entity @s CustomName run data merge entity @s {Tags:["sMarked"]}
-execute at @e[type=wither,limit=1,sort=nearest] as @e[type=bogged,limit=1,sort=random,distance=..40] unless data entity @s CustomName run data merge entity @s {Tags:["sMarked"]}
-execute at @e[type=wither,limit=1,sort=nearest] as @e[type=stray,limit=1,sort=random,distance=..40] unless data entity @s CustomName run data merge entity @s {Tags:["sMarked"]}
+execute at @e[type=wither,limit=1,sort=nearest] as @e[type=#minecraft:skeletons,limit=1,sort=random,distance=..40] unless data entity @s CustomName run data merge entity @s {Tags:["sMarked"]}
 
 execute at @e[type=wither,limit=1,sort=nearest] as @e[limit=1,sort=random,nbt={Tags:["sMarked"]}] at @s run summon wither_skeleton ~ ~.01 ~ {DeathLootTable: "wither:entities/withermobs", Tags: ["wSkel"], attributes: [{id: "generic.max_health", base: 15}], Health: 15, HandItems:[{id:"minecraft:bow",count:1},{}],HandDropChances:[0.000F,0.085F], ArmorItems:[{id:"minecraft:netherite_boots",count:1,components:{"minecraft:unbreakable":{show_in_tooltip:false},"minecraft:trim":{material:"minecraft:diamond",pattern:"minecraft:silence",show_in_tooltip:false}}},{},{},{}],ArmorDropChances:[-327.670F,0.085F,0.085F,0.085F]}
 
