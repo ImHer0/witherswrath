@@ -4,6 +4,7 @@ scoreboard players set wspawn spawn 0
 scoreboard players set witherCount witherCount 0
 scoreboard players set wChargereset wchargereset 0
 scoreboard players set enraged wenraged 0
+scoreboard players set wfight wfight 0
 
 
 

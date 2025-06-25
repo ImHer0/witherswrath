@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "wither:wither/fight_start"
+    "function": "wither:wither/fight_once"
   }
 }
