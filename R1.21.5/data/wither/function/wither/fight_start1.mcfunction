@@ -13,9 +13,9 @@ team modify Wither nametagVisibility never
 # ASTHETICS
 
 execute if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggleweather:Enabled} run weather thunder
-gamerule doFireTick false
-execute if data storage wither:options {toggleweather:Enabled} run gamerule doDaylightCycle false
-execute if data storage wither:options {toggledestruction:Disabled} run gamerule mobGriefing false
+execute if score fireTck rules matches 1 run gamerule doFireTick false
+execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle false
+execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mobGriefing false
 
 # TIME SET NIGHT Without the day reset ;)
 
@@ -71,7 +71,7 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] run team join Wither @
 # MODIFICATIONS
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} run effect give @e[type=player,distance=..100] minecraft:darkness 8 1 true
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} run effect give @e[type=!player,type=!wither,distance=..100] minecraft:weakness 600 5 true
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {Health:600f,Tags:["Bedrock","Charge","Wither","Dash"],equipment:{feet:{id:"minecraft:leather_boots",count:1,components:{"minecraft:enchantments":{"minecraft:blast_protection":255},"minecraft:unbreakable":{}}},legs:{id:"minecraft:iron_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}},chest:{id:"minecraft:iron_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}},head:{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}}},drop_chances:{mainhand:0,feet:0,legs:0,chest:0,head:0},attributes:[{id:"minecraft:follow_range",base:69},{id:"minecraft:knockback_resistance",base:0.5},{id:"minecraft:max_health",base:600},{id:"minecraft:movement_speed",base:2},{id:"minecraft:step_height",base:2},{id:"minecraft:explosion_knockback_resistance",base:0.9},{id:"minecraft:flying_speed",base:5}]}
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {Health:600f,Tags:["Bedrock","Charge","Wither","Dash"],equipment:{feet:{id:"minecraft:leather_boots",count:1,components:{"minecraft:enchantments":{"minecraft:blast_protection":255},"minecraft:unbreakable":{}}},legs:{id:"minecraft:iron_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}},chest:{id:"minecraft:iron_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}},head:{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}}},drop_chances:{mainhand:0,feet:0,legs:0,chest:0,head:0},attributes:[{id:"minecraft:follow_range",base:69},{id:"minecraft:knockback_resistance",base:0.5},{id:"minecraft:max_health",base:600},{id:"minecraft:movement_speed",base:0.8},{id:"minecraft:step_height",base:2},{id:"minecraft:explosion_knockback_resistance",base:0.9},{id:"minecraft:flying_speed",base:0}]}
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} as @e[type=player,distance=..100] run attribute @s minecraft:gravity modifier add 1 0.05 add_value
 
 function wither:wither/convert

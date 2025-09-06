@@ -14,9 +14,9 @@ function wither:wither/fight_startparttrail
 
 # ASTHETICS
 execute if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggleweather:Enabled} run weather thunder
-gamerule doFireTick false
-execute if data storage wither:options {toggleweather:Enabled} run gamerule doDaylightCycle false
-execute if data storage wither:options {toggledestruction:Disabled} run gamerule mobGriefing false
+execute if score fireTck rules matches 1 run gamerule doFireTick false
+execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle false
+execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mobGriefing false
 
 # TIME SET NIGHT Without the day reset ;)
 

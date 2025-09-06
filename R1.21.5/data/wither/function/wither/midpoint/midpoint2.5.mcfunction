@@ -1,4 +1,4 @@
-# Ran by midpoint 2 after 10 ticks
+# Ran by midpointground
 
 execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {CustomName:"The Wither's Instability", ExplosionRadius: 10, Invulnerable: 1b, Fuse: 0, ignited: 1b, Silent: 1b, attributes:[{id:"minecraft:scale",base:0.0625}]}
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomNameVisible: 0b, NoAI: 0b, attributes:[{id:"minecraft:armor",base:5},{id:"minecraft:armor_toughness",base:5}]}

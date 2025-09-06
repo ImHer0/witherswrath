@@ -1,6 +1,6 @@
 # TIME
 execute if data storage wither:options {toggleweather:Enabled} run time add 1000t
-execute if data storage wither:options {toggleweather:Enabled} run gamerule doDaylightCycle true
+execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle true
 weather clear
 
 # ONE-TIME ONLY: Removing this tag will stop the adv from triggering
@@ -8,8 +8,8 @@ tag @s remove Wither
 
 # FUNCTIONS
 execute if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/midpoint/midpoint2 2s
-execute if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/midpoint/midpoint3 5s
 execute if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/midpoint/midpointtick 1t
+
 execute if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/midpoint/midpointparttick 4t
 
 # BEDROCK
@@ -17,7 +17,7 @@ execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=with
 execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=wither,limit=1,sort=nearest] run schedule function wither:wither/midpoint/midpointbedrock 10t
 
 # GO UP GO DOWN 
-execute if data storage wither:options {toggleanimation:Default} at @e[type=wither,limit=1,sort=nearest] run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["midpointpos"]}
+execute if data storage wither:options {toggleanimation:Default} at @e[type=wither,limit=1,sort=nearest] align xyz positioned ~.5 ~.5 ~.5 run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["midpointpos"],attributes:[{id:"minecraft:scale",base:2}]}
 
 # BREAK BOX + SFX
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggledestruction:Enabled} run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace
@@ -42,7 +42,7 @@ schedule clear wither:wither/musicphase1
 execute as @a run stopsound @a record minecraft:wither.phase1
 function wither:wither/musicphase2
 effect give @e[type=wither_skeleton,distance=..20] resistance 3 10
-execute if data storage wither:options {toggleanimation:Default} run data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Invulnerable:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:11,Amplifier:255b,Duration:5,ShowParticles:0b}]}
+execute if data storage wither:options {toggleanimation:Default} run data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Invulnerable:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:11,Amplifier:255,Duration:5,ShowParticles:0b}]}
 
 
 

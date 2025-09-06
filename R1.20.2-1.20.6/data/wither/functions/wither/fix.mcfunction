@@ -15,6 +15,8 @@ scoreboard objectives remove skulllaunchmotX
 scoreboard objectives remove skulllaunchmotY
 scoreboard objectives remove skulllaunchmotZ
 scoreboard objectives remove wfight
+scoreboard objectives remove rules
+scoreboard objectives remove stages
 
 team remove Wither
 
@@ -49,6 +51,7 @@ kill @e[tag=wArcher]
 kill @e[type=armor_stand,tag=hStand]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
+kill @e[type=armor_stand,tag=midpointpos]
 execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",Count:1b}},limit=1,tag=] run kill @e[type=experience_orb,sort=nearest,distance=..10]
 
 

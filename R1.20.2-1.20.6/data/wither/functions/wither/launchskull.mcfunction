@@ -32,6 +32,8 @@ execute store result storage withers:launch skulllaunchmot.y double 0.0001 run s
 execute store result storage withers:launch skulllaunchmot.z double 0.0001 run scoreboard players get @e[type=wither_skull,tag=skulllaunch,limit=1] skulllaunchmotZ
 
 
+execute as @e[type=minecraft:wither,limit=1] at @s run tp @s ~ ~ ~ facing entity @p
+
 execute as @e[type=minecraft:wither_skull,tag=skulllaunch] at @s run function wither:wither/enraged/skulls/launchskulls with storage withers:launch skulllaunchmot
 
 execute as @e[type=wither_skull,tag=deathtag] at @s run tp @s ~ ~ ~ facing entity @p eyes

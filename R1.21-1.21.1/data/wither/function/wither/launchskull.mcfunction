@@ -1,4 +1,5 @@
 
+execute as @e[type=minecraft:wither,limit=1] at @s run tp @s ~ ~ ~ facing entity @p
 execute as @e[type=minecraft:wither] at @s run playsound minecraft:entity.wither.shoot player @e[type=player,distance=..50] ~ ~ ~ 0.3 1.2
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:wither_skull ^ ^3 ^ {Tags:["skulllaunch"],Motion:[0.05,0.09,0.05],Fire:200,CustomName:"Wither Missile"}
 
@@ -30,7 +31,6 @@ execute as @e[type=minecraft:wither_skull,tag=skulllaunch] at @s run scoreboard 
 execute store result storage withers:launch skulllaunchmot.x double 0.0001 run scoreboard players get @e[type=wither_skull,tag=skulllaunch,limit=1] skulllaunchmotX
 execute store result storage withers:launch skulllaunchmot.y double 0.0001 run scoreboard players get @e[type=wither_skull,tag=skulllaunch,limit=1] skulllaunchmotY
 execute store result storage withers:launch skulllaunchmot.z double 0.0001 run scoreboard players get @e[type=wither_skull,tag=skulllaunch,limit=1] skulllaunchmotZ
-
 
 execute as @e[type=minecraft:wither_skull,tag=skulllaunch] at @s run function wither:wither/enraged/skulls/launchskulls with storage withers:launch skulllaunchmot
 
