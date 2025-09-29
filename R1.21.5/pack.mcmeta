@@ -4,7 +4,9 @@
 	   "description": "\u00A7f\u00A7lThe Wither Revamp!",
 	   "supported_formats": [
 		  71,
-		  86
-		]
+		  88
+		],
+		"min_format": 71,
+		"max_format": 88
    }
 }

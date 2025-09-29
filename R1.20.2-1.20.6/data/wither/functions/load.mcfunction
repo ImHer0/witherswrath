@@ -1,5 +1,5 @@
 scoreboard objectives add witherCount dummy
-scoreboard objectives add wfight dummy
+
 scoreboard players set witherCount witherCount 0
 scoreboard objectives add checkHealth dummy
 scoreboard objectives add witherCheck dummy

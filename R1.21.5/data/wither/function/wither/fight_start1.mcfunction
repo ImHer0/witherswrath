@@ -59,7 +59,7 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-1 ~
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-2 ~ minecraft:bedrock run tp ~ ~8 ~
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-3 ~ minecraft:bedrock run tp ~ ~8 ~
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if block ~ ~-4 ~ minecraft:bedrock run tp ~ ~8 ~
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock run fill ~-2 ~1 ~-2 ~2 ~5 ~2 air destroy
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggledestruction:Enabled} unless block ^ ^ ^1 minecraft:bedrock unless block ^ ^ ^2 minecraft:bedrock unless block ^ ^ ^3 minecraft:bedrock unless block ~ ~-1 ~ minecraft:bedrock unless block ~ ~-2 ~ minecraft:bedrock unless block ~ ~1 ~ minecraft:bedrock unless block ~ ~2 ~ minecraft:bedrock unless block ~ ~3 ~ minecraft:bedrock unless block ~ ~4 ~ minecraft:bedrock unless block ~ ~5 ~ minecraft:bedrock run fill ~-2 ~1 ~-2 ~2 ~5 ~2 air destroy
 
 # ASCEND
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} if entity @e[type=player,distance=..30] as @s at @s run particle sculk_soul ~ ~1 ~ 0.5 .35 0.5 0.1 50 normal

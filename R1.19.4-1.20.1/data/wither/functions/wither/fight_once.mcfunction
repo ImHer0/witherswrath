@@ -1,9 +1,13 @@
-# Ran by advancements for summoning the Wither
-advancement revoke @s only wither:wither/summoned_wither
+# Removes Tag
+
+execute as @e[type=minecraft:wither,tag=justSummoned] at @s run tag @s add theWither
+execute as @e[type=minecraft:wither,tag=justSummoned] at @s run data merge entity @s {Invul:220}
+execute as @e[type=minecraft:wither,tag=justSummoned] at @s run tag @s remove justSummoned
+
+
 
 # Keeps count of how many withers are alive
-execute at @e[type=minecraft:player,limit=1,sort=random] as @s run scoreboard players add witherCount witherCount 1
+execute as @s run scoreboard players add witherCount witherCount 1
 
-execute unless score wfight wfight matches 1 run function wither:wither/fight_start
+execute if score witherCount witherCount matches 1 run function wither:wither/fight_start
 
-scoreboard players set wfight wfight 1

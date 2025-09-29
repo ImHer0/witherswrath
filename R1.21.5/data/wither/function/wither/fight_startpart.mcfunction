@@ -4,4 +4,4 @@ execute if data storage wither:options {toggleanimation:Default} as @e[type=mine
 
 execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.spawn hostile @e[type=player,distance=..50] ~ ~ ~ 1 1
 
-schedule function wither:wither/fight_startpart 1s
+execute if entity @e[type=minecraft:wither] run schedule function wither:wither/fight_startpart 1s

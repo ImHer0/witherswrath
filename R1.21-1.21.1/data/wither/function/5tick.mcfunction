@@ -25,4 +25,6 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=!player,dis
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle minecraft:mycelium ~ ~1 ~ 1 1 1 0 1500 normal
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle trial_omen ~ ~1 ~ 1 1 1 2 10 normal
 
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run particle minecraft:ash ~ ~ ~ 10 10 10 0 300
+
 schedule function wither:5tick 5t

@@ -1,6 +1,4 @@
 
-
-
 # PREVENTS MORE THAN 1 WITHER ALIVE
 execute unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 0 run function wither:wither/check
 execute unless score witherCount witherCount matches 0 unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 2 run scoreboard players set witherCount witherCount 0

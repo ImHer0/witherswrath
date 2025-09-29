@@ -1,1 +1,1 @@
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] run fill ~-2 ~0 ~-2 ~2 ~4 ~2 air destroy
+execute if data storage wither:options {toggledestruction:Enabled} at @e[type=minecraft:wither,limit=1,sort=nearest] run fill ~-2 ~0 ~-2 ~2 ~4 ~2 air destroy

@@ -1,3 +1,4 @@
+
 # Checks gamerules
 
 execute store result score mobGrf rules run gamerule mobGriefing
@@ -9,7 +10,7 @@ execute store result score dayCycl rules run gamerule doDaylightCycle
 execute if score witherCount witherCount matches 1 run schedule function wither:wither_check 1t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_start1 1t
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/skull 10s
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/launchskull 20s
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/launchskull 22s
 execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/gravity 10s
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_startpart 1t
 execute if score witherCount witherCount matches 1 if data storage wither:options {togglehoming:Enabled} run schedule function wither:wither/homing/homingpre 10s

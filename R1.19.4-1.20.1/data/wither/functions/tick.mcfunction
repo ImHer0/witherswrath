@@ -1,4 +1,8 @@
 
+# Checks for alive wither every tick
+execute as @e[type=minecraft:wither,tag=!theWither,limit=1] at @s run tag @s add justSummoned
+execute as @e[type=minecraft:wither,tag=justSummoned,limit=1] at @s run function wither:wither/fight_once
+
 function wither:wither/skull
 execute as @e[type=minecraft:wither_skull,tag=buff,limit=1,tag=buff] run kill @s 
 execute as @e[type=minecraft:wither_skull,tag=buff,limit=1,tag=buff] run kill @s 

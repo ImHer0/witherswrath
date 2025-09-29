@@ -14,7 +14,7 @@ scoreboard objectives remove playerposZ
 scoreboard objectives remove skulllaunchmotX
 scoreboard objectives remove skulllaunchmotY
 scoreboard objectives remove skulllaunchmotZ
-scoreboard objectives remove wfight
+
 scoreboard objectives remove rules
 scoreboard objectives remove stages
 
