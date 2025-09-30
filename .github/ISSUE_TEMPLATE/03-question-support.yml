@@ -46,7 +46,6 @@ body:
       options:
         - Datapack (goes in datapacks folder)
         - Mod (goes in mods folder)
-        - Bedrock Edition (behavior pack)
         - Not sure/Not installed yet
     validations:
       required: true

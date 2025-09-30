@@ -67,18 +67,6 @@ body:
         - "1.19.4-1.20.1"
         - "All supported versions"
 
-  - type: dropdown
-    id: format-support
-    attributes:
-      label: Which formats should this support?
-      description: Which installation types should have this feature?
-      multiple: true
-      options:
-        - Datapack version
-        - Mod version (Fabric/Forge/etc.)
-        - Bedrock Edition version
-        - All formats
-
   - type: textarea
     id: alternatives
     attributes:
