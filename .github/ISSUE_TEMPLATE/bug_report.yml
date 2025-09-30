@@ -1,0 +1,156 @@
+name: Bug Report
+description: Report a bug to help us improve Wither's Wrath
+title: "[BUG] Brief description of the issue"
+labels: ["bug"]
+assignees:
+  - ImHer0
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for reporting a bug!
+        
+        Please fill out all sections below to help us understand and fix the issue quickly.
+        **Don't skip any sections** - we need all this information to help you!
+
+  - type: input
+    id: version
+    attributes:
+      label: Wither's Wrath Version
+      description: Look in your mods/datapacks/plugins folder and write the EXACT version number
+      placeholder: "e.g., v1.10.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: What format are you using?
+      description: Select the type of installation you have
+      options:
+        - Datapack (goes in datapacks folder)
+        - Mod (goes in mods folder)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Are you playing alone or on a server?
+      options:
+        - Singleplayer (playing alone)
+        - Multiplayer (playing on a server)
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft Version
+      description: What version of Minecraft are you using?
+      placeholder: "e.g., 1.20.1, 1.19.4"
+    validations:
+      required: true
+
+  - type: input
+    id: server-software
+    attributes:
+      label: Server/Client Software
+      description: What mod loader or server software are you using?
+      placeholder: "e.g., Vanilla, Fabric, Forge, Paper, Purpur, Spigot"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What went wrong?
+      description: Explain what happened that shouldn't have happened. Be specific!
+      placeholder: Describe the bug clearly...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What did you expect to happen?
+      description: Explain what you thought would happen instead
+      placeholder: Describe what you expected...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: How to reproduce this bug
+      description: Tell us EXACTLY how to recreate this bug. Be super specific!
+      placeholder: |
+        1. First I did...
+        2. Then I did...
+        3. Next I did...
+        4. Finally this happened...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      description: Does this bug occur every time?
+      options:
+        - Every single time
+        - Sometimes (about half the time)
+        - Rarely (once in a while)
+        - Only happened once
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other mods/plugins/datapacks
+      description: List any other mods, plugins, or datapacks you have installed
+      placeholder: "List them here, or write 'None' if you don't have any others"
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error messages or logs
+      description: Copy and paste ANY error messages you saw in chat, console, or logs
+      placeholder: "Paste error messages here, or write 'None' if you didn't see any"
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or videos
+      description: Drag and drop images or videos here to help explain the problem
+      placeholder: "Drag files here, or write 'No screenshots' if you don't have any"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Anything else we should know?
+      placeholder: |
+        Examples:
+        - When did this start happening?
+        - Does it only happen in certain worlds?
+        - Did you try turning it off and on again?
+        - Were you doing anything special when it broke?
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before you submit
+      description: Please confirm you've done these things
+      options:
+        - label: I filled out ALL the sections above (didn't skip any!)
+          required: true
+        - label: I checked if someone else already reported this bug
+          required: true
+        - label: I'm using a recent version of Wither's Wrath
+          required: true
+        - label: I tested this without other mods/plugins to make sure they're not causing it
+          required: false
