@@ -1,0 +1,112 @@
+name: Feature Request
+description: Suggest a new feature or improvement for Wither's Wrath
+title: "[FEATURE] Brief description of your idea"
+labels: ["enhancement"]
+assignees:
+  - ImHer0
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for suggesting a feature!
+        
+        We love hearing your ideas! Please fill out the sections below to help us understand your suggestion.
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: What type of feature is this?
+      description: Select the category that best fits your suggestion
+      options:
+        - New wither behavior/mechanic
+        - New drop/reward system
+        - Performance improvement
+        - Configuration/customization option
+        - Quality of life improvement
+        - Compatibility feature
+        - Other (explain below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What problem does this solve?
+      description: Is your feature request related to a problem or limitation? Describe it clearly.
+      placeholder: "Example: I'm always frustrated when withers don't drop enough rewards for the effort..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Describe your feature idea
+      description: What exactly would you like to see added or changed?
+      placeholder: "Be as detailed as possible about what you want and how it should work..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-ideas
+    attributes:
+      label: How do you think this could work?
+      description: Do you have any ideas about how this feature could be implemented?
+      placeholder: "Example: Maybe it could work by... or perhaps when a player does X, then Y happens..."
+
+  - type: dropdown
+    id: minecraft-versions
+    attributes:
+      label: Which Minecraft versions should this support?
+      description: Which versions would benefit from this feature?
+      multiple: true
+      options:
+        - "1.21.5+"
+        - "1.21.2-1.21.4"
+        - "1.21-1.21.1"
+        - "1.20.2-1.20.6"
+        - "1.19.4-1.20.1"
+        - "All supported versions"
+
+  - type: dropdown
+    id: format-support
+    attributes:
+      label: Which formats should this support?
+      description: Which installation types should have this feature?
+      multiple: true
+      options:
+        - Datapack version
+        - Mod version (Fabric/Forge/etc.)
+        - Bedrock Edition version
+        - All formats
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative solutions
+      description: Have you considered any alternative approaches to solve this problem?
+      placeholder: "Describe any alternative solutions or workarounds you've thought of..."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context, screenshots, or examples about the feature request here.
+      placeholder: |
+        Examples:
+        - Screenshots or videos showing what you mean
+        - Links to similar features in other mods/games
+        - Examples from Minecraft or other contexts
+        - Why this would be valuable to other players
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before you submit
+      description: Please confirm these things
+      options:
+        - label: I checked if this feature was already suggested
+          required: true
+        - label: This feature would benefit other players, not just me
+          required: true
+        - label: This feature fits with the theme/purpose of Wither's Wrath
+          required: true

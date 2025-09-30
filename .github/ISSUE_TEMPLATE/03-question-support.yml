@@ -1,0 +1,105 @@
+name: Question/Support
+description: Ask a question or get help with Wither's Wrath
+title: "[QUESTION] Brief description of your question"
+labels: ["question"]
+assignees:
+  - ImHer0
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Need help?
+        
+        We're here to help! Please provide as much detail as possible so we can assist you effectively.
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: What type of help do you need?
+      description: Select the category that best describes your question
+      options:
+        - Installation help (how to install the pack)
+        - Configuration help (how to customize settings)
+        - Compatibility question (does it work with X?)
+        - How does feature X work?
+        - Is this behavior intended?
+        - Performance/optimization help
+        - General question about the pack
+        - Other (explain below)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Wither's Wrath Version
+      description: What version are you using?
+      placeholder: "e.g., v1.14.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: What format are you using?
+      description: Select your installation type
+      options:
+        - Datapack (goes in datapacks folder)
+        - Mod (goes in mods folder)
+        - Bedrock Edition (behavior pack)
+        - Not sure/Not installed yet
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft Version
+      description: What version of Minecraft are you using?
+      placeholder: "e.g., 1.21.2, 1.20.1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What do you need help with? Be as specific as possible.
+      placeholder: "Describe your question or issue in detail..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What have you already tried?
+      description: Let us know what you've attempted so far
+      placeholder: |
+        Example:
+        - I tried reinstalling the pack
+        - I checked the configuration files
+        - I looked at the documentation
+        - etc.
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Any other details that might be helpful?
+      placeholder: |
+        Examples:
+        - Other mods/plugins you're using
+        - Server setup details
+        - Screenshots or error messages
+        - Specific scenarios where you need help
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before you submit
+      description: Please confirm these things
+      options:
+        - label: I checked the README and documentation first
+          required: true
+        - label: I searched existing issues to see if this was already asked
+          required: true
