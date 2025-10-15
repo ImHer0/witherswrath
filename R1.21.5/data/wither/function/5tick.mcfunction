@@ -1,6 +1,5 @@
 # PREVENTS MORE THAN 1 WITHER ALIVE
 execute unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 0 run function wither:wither/check
-execute unless score witherCount witherCount matches 0 unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 2 run scoreboard players set witherCount witherCount 0
 
 execute as @e[type=wither_skeleton,nbt={Tags:["wArcher"]},limit=1,sort=random] at @e[type=blaze,nbt={Tags: ["wArcher"]},sort=nearest,limit=1] unless block ~ ~-.1 ~ air run ride @s dismount
 

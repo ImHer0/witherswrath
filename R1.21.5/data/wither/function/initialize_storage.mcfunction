@@ -1,4 +1,4 @@
-# Set initial storage values true = enabled, false = disabled
+# Set initial storage values Enabled, Disabled
 data modify storage wither:options toggletrophy set value Enabled
 data modify storage wither:options toggledestruction set value Enabled
 data modify storage wither:options togglehoming set value Enabled
@@ -6,8 +6,6 @@ data modify storage wither:options togglecharge set value Enabled
 data modify storage wither:options toggledash set value Enabled
 data modify storage wither:options toggleboomtp set value Enabled
 data modify storage wither:options togglespawns set value Enabled
-data modify storage wither:options toggleweather set value Enabled
-
 data modify storage wither:options toggleweather set value Enabled
 
 # Animations 0 = enabled, 1 = disabled, 2 = bedrock
