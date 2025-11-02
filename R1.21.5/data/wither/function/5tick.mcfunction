@@ -1,5 +1,5 @@
 # PREVENTS MORE THAN 1 WITHER ALIVE
-execute unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 0 run function wither:wither/check
+execute unless score witherCount witherCount matches 1 unless score witherCount witherCount matches 0 run function wither:wither/lifecycle/check
 
 execute as @e[type=wither_skeleton,nbt={Tags:["wArcher"]},limit=1,sort=random] at @e[type=blaze,nbt={Tags: ["wArcher"]},sort=nearest,limit=1] unless block ~ ~-.1 ~ air run ride @s dismount
 
@@ -23,5 +23,12 @@ execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle trial_omen ~ ~1 ~ 1 1 1 2 10 normal
 
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run particle minecraft:ash ~ ~ ~ 10 10 10 0 300
+
+execute if entity @e[type=minecraft:wither,limit=1,sort=nearest,tag=Swarm] run function wither:wither/hit/hit6
+execute if entity @e[type=minecraft:wither,limit=1,sort=nearest,tag=Bedrock] run function wither:wither/hit/hit5
+execute if entity @e[type=minecraft:wither,limit=1,sort=nearest,tag=Dash] run function wither:wither/hit/hit4
+execute if entity @e[type=minecraft:wither,limit=1,sort=nearest,tag=Charge] run function wither:wither/hit/hit3
+execute if entity @e[type=minecraft:wither,limit=1,sort=nearest,tag=Wither] run function wither:wither/hit/hit2
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] unless data entity @s Tags run function wither:wither/hit/hit
 
 schedule function wither:5tick 5t

@@ -10,6 +10,6 @@
         }
     },
     "rewards": {
-        "function": "wither:wither/dead"
+        "function": "wither:wither/lifecycle/death"
     }
 }

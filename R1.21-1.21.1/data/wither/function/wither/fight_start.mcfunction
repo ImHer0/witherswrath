@@ -8,17 +8,16 @@ execute store result score dayCycl rules run gamerule doDaylightCycle
 
 # FUNCTIONS
 execute if score witherCount witherCount matches 1 run schedule function wither:wither_check 1t
-execute if score witherCount witherCount matches 1 run schedule function wither:wither_check 1t
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_start1 1t
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/skull 10s
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/launchskull 22s
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_startpart 1t
-execute if score witherCount witherCount matches 1 if data storage wither:options {togglehoming:Enabled} run schedule function wither:wither/homing/homingpre 10s
-execute if score witherCount witherCount matches 1 if data storage wither:options {togglespawns:Enabled} run schedule function wither:wither/spawn 15s
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/start1 219t
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/unstuck 15s
-execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/fight_starttick 1t
-execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Bedrock} run schedule function wither:wither/fight_start_bedrock 1t
-execute if score witherCount witherCount matches 1 run schedule function wither:wither/unstuck 15s
-execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/fight_starttick 1t
-execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Bedrock} run schedule function wither:wither/fight_start_bedrock 1t
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_start/init 1t
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/skull/launch 22s
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/skull/burst/launch_burst_loop 30s
+execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/passive/skull 12s
+execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/motion/gravity 10s
+execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/phase1/check_player_tick 12s
+execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/fight_start/part 1t
+execute if score witherCount witherCount matches 1 if data storage wither:options {togglehoming:Enabled} run schedule function wither:wither/phase1/homing/homingpre 10s
+execute if score witherCount witherCount matches 1 if data storage wither:options {togglespawns:Enabled} run schedule function wither:wither/passive/spawn 15s
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/lifecycle/spawn 219t
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/unstuck/check 15s
+execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/fight_start/tick 1t
+execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Bedrock} run schedule function wither:wither/fight_start/bedrock 1t

@@ -5,10 +5,10 @@ execute as @e[type=minecraft:wither,limit=1] run data merge entity @e[type=withe
 execute at @e[type=minecraft:wither,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["wither_stasis"],Invisible:1b,Invulnerable:1b,Marker:1b}
 
 
-schedule clear wither:wither/dashes/dash
-schedule clear wither:wither/charge/chargepre
-schedule clear wither:wither/homing/homingpre
-schedule clear wither:wither/spawn
+schedule clear wither:wither/phase2/dashes/dash
+schedule clear wither:wither/phase2/charge/chargepre
+schedule clear wither:wither/phase1/homing/homingpre
+schedule clear wither:wither/passive/spawn
 
 
 schedule function wither:wither/bedrock/death/deadbedrock1 1t

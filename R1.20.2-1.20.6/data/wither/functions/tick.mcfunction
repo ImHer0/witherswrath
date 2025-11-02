@@ -3,7 +3,7 @@
 execute as @e[type=minecraft:wither,tag=!theWither,limit=1] at @s run tag @s add justSummoned
 execute as @e[type=minecraft:wither,tag=justSummoned,limit=1] at @s run function wither:wither/fight_once
 
-function wither:wither/skull
+function wither:wither/passive/skull
 execute as @e[type=minecraft:wither_skull,tag=buff,limit=1,tag=buff] run kill @s 
 execute as @e[type=minecraft:wither_skull,tag=buff,limit=1,tag=buff] run kill @s 
 
@@ -14,9 +14,9 @@ execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run
 
 
 # WITHER CHECK
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/charge/chargepre
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/homing/homingpre
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/spawn
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/phase2/charge/chargepre
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/phase1/homing/homingpre
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/passive/spawn
 
 # WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
 

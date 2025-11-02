@@ -13,9 +13,9 @@ execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run
 
 
 # WITHER CHECK
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/charge/chargepre
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/homing/homingpre
-execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/spawn
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/phase2/charge/chargepre
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/phase1/homing/homingpre
+execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/passive/spawn
 
 
 # WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
