@@ -2,8 +2,8 @@
 tag @s remove Charge
 
 # DASH PREP
-data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {NoAI: 1b}
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] run summon armor_stand ~ ~ ~ {Invisible: 1b, Invulnerable: 1b, NoGravity: 1b, Tags: ["chargew"]}
+data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {NoAI:1b}
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["chargew"]}
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] run tp @e[type=minecraft:wither,limit=1,sort=nearest] ^ ^ ^ facing entity @p feet
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.breeze.inhale hostile @a ~ ~ ~ 1 0.1
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:player,distance=..30] at @s run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 1 .7
@@ -20,5 +20,7 @@ execute unless score enraged wenraged matches 1 run schedule function wither:wit
 
 execute if score enraged wenraged matches 1 run schedule function wither:wither/phase2/charge/charge 10t
 execute if score enraged wenraged matches 1 run schedule function wither:wither/phase2/charge/chargetick 10t
+
+
 
 

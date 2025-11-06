@@ -34,3 +34,4 @@ execute store result storage withers:launch skulllaunchmot.z double 0.0001 run s
 execute as @e[type=minecraft:wither_skull,tag=skulllaunch] at @s run function wither:wither/phase2/enraged/skulls/launchskulls with storage withers:launch skulllaunchmot
 
 schedule function wither:wither/skull/launch_end 4s
+

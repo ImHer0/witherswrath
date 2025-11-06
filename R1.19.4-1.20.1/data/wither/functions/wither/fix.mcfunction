@@ -69,7 +69,7 @@ schedule clear wither:wither/unstuck/check
 schedule clear wither:wither/fight_start/part
 schedule clear wither:wither/fight_start/tick
 schedule clear wither:wither/fight_start/bedrock
-schedule clear wither:wither/fight_start1
+
 schedule clear wither:wither/lifecycle/spawn
 schedule clear wither:wither/midpoint/midpoint2
 schedule clear wither:wither/midpoint/midpointtick

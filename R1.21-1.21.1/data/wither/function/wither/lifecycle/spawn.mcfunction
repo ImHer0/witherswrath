@@ -1,6 +1,6 @@
 # spawn Purge
 
-execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run summon creeper ~ ~ ~ {Silent:1b,Invulnerable:1b,CustomNameVisible:0b,ExplosionRadius:13b,Fuse:1,ignited:1b,CustomName:'"the Wither\'s Wrath"'}
+execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run summon creeper ~ ~ ~ {Team:"Wither",Silent:1b,Invulnerable:1b,CustomNameVisible:0b,ExplosionRadius:13b,Fuse:1,ignited:1b,CustomName:'"the Wither\'s Wrath"'}
 execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:explosion_emitter ~ ~ ~ 0 1 0 0.6 6 force
 execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:campfire_signal_smoke ~ ~ ~ 0 1 0 0.6 300 force
 execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:lava ~ ~ ~ 3 3 3 0.1 200 force

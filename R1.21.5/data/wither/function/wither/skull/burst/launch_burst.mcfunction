@@ -36,3 +36,4 @@ execute as @e[type=minecraft:wither_skull,tag=burstlaunch,sort=nearest] at @s ru
 
 
 execute as @e[type=minecraft:wither_skull,tag=burstlaunch] run function wither:wither/skull/burst/launch_burst_remove
+

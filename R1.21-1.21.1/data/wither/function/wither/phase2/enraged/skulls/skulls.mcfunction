@@ -26,3 +26,4 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minec
 
 schedule function wither:wither/phase2/enraged/skulls/stopskulls 1s
 
+

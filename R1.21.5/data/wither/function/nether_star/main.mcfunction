@@ -1,8 +1,8 @@
 # DISPLAY
-    execute if data storage wither:options {toggleanimation:Default} as @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1] at @s run summon item_display ~ ~ ~ {NoGravity:1b,Glowing:1b,Tags:["nether_star"],glow_color_override:16777215,brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:nether_star",count:1}}
+    execute if data storage wither:options {toggleanimation:Default} as @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1] at @s run summon item_display ~ ~ ~ {Team:"Wither",NoGravity:1b,Glowing:1b,Tags:["nether_star"],glow_color_override:16777215,brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.8f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:nether_star",count:1}}
 
 # Summons armour stand for xp
-    execute if data storage wither:options {toggleanimation:Default} as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}}] at @s run summon armor_stand ~ ~ ~ {Invisible: 1b, Invulnerable: 1b, NoGravity: 1b, Tags: ["starxp"]}
+    execute if data storage wither:options {toggleanimation:Default} as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}}] at @s run summon armor_stand ~ ~ ~ {Team:"Wither",Invisible: 1b, Invulnerable: 1b, NoGravity: 1b, Tags: ["starxp"]}
 
 
 # replaces nether star properties 
@@ -26,3 +26,4 @@
 
 execute if data storage wither:options {toggleanimation:Default} run function wither:nether_star/tick
 schedule function wither:nether_star/endloop 4800t
+
