@@ -9,6 +9,7 @@ scoreboard objectives add witherCheck dummy
 
 team add Wither
 team modify Wither nametagVisibility never
+team modify Wither friendlyFire false
 
 function wither:wither/fight_start/part
 

@@ -2,4 +2,4 @@ execute at @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=hStand] run pa
 execute as @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=hStand] at @e[type=minecraft:armor_stand,limit=1,sort=nearest,tag=hStand] run playsound minecraft:entity.wither.shoot hostile @a ~ ~ ~ 2 0.5
 
 
-execute if entity @e[type=minecraft:armor_stand,tag=hStand] run schedule function wither:wither/phase1/homing/homing5tick 5t
+execute if entity @e[type=minecraft:armor_stand,tag=hStand] run schedule function wither:wither/phase2/homing/homing5tick 5t

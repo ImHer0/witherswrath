@@ -19,4 +19,4 @@ execute as @e[type=minecraft:creeper,tag=hboom] at @s run playsound minecraft:en
 
 
 
-execute if entity @e[type=minecraft:armor_stand,tag=hStand] run schedule function wither:wither/phase1/homing/homingtick 1t
+execute if entity @e[type=minecraft:armor_stand,tag=hStand] run schedule function wither:wither/phase2/homing/homingtick 1t

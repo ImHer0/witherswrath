@@ -3,5 +3,5 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] run summon armor_stand
 
 
 
-function wither:wither/phase1/homing/homing5tick
-function wither:wither/phase1/homing/homingtick
+function wither:wither/phase2/homing/homing5tick
+function wither:wither/phase2/homing/homingtick

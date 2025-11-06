@@ -9,6 +9,7 @@ scoreboard objectives add witherCheck dummy
 
 team add Wither
 team modify Wither nametagVisibility never
+team modify Wither friendlyFire false
 
 # ASTHETICS
 execute if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggleweather:Enabled} run weather thunder

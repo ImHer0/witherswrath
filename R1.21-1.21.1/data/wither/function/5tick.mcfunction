@@ -19,7 +19,7 @@ execute at @e[tag=wSkel] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 .03 
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=#wither_friends,distance=..40] run team join Wither
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:blaze,distance=..40] run team join Wither
     # This one is for mobs in water (basically any sea creature)
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=!player,distance=..200] if block ~ ~ ~ minecraft:water run team join Wither
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=#aquatic,distance=..50] run team join Wither
 
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle minecraft:mycelium ~ ~1 ~ 1 1 1 0 1500 normal
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,limit=1,sort=nearest] run particle trial_omen ~ ~1 ~ 1 1 1 2 10 normal
