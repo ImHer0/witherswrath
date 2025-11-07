@@ -16,6 +16,7 @@ scoreboard objectives remove skulllaunchmotY
 scoreboard objectives remove skulllaunchmotZ
 scoreboard objectives remove burstcount
 scoreboard objectives remove spawn
+scoreboard objectives remove playerCount
 scoreboard objectives remove witherCheck
 scoreboard objectives remove wither.temp.x
 scoreboard objectives remove wither.temp.y
@@ -87,6 +88,26 @@ schedule clear wither:wither/midpoint/spawns/blaze7
 schedule clear wither:wither/midpoint/spawns/blaze8
 schedule clear wither:wither/midpoint/spawns/blaze9
 schedule clear wither:wither/midpoint/spawns/blaze10
+schedule clear wither:wither/midpoint/spawns/blaze11
+schedule clear wither:wither/midpoint/spawns/blaze12
+schedule clear wither:wither/midpoint/spawns/blaze13
+schedule clear wither:wither/midpoint/spawns/blaze14
+schedule clear wither:wither/midpoint/spawns/blaze15
+schedule clear wither:wither/midpoint/spawns/blaze16
+schedule clear wither:wither/midpoint/spawns/blaze17
+schedule clear wither:wither/midpoint/spawns/blaze18
+schedule clear wither:wither/midpoint/spawns/blaze19
+schedule clear wither:wither/midpoint/spawns/blaze20
+schedule clear wither:wither/midpoint/spawns/blaze21
+schedule clear wither:wither/midpoint/spawns/blaze22
+schedule clear wither:wither/midpoint/spawns/blaze23
+schedule clear wither:wither/midpoint/spawns/blaze24
+schedule clear wither:wither/midpoint/spawns/blaze25
+schedule clear wither:wither/midpoint/spawns/blaze26
+schedule clear wither:wither/midpoint/spawns/blaze27
+schedule clear wither:wither/midpoint/spawns/blaze28
+schedule clear wither:wither/midpoint/spawns/blaze29
+schedule clear wither:wither/midpoint/spawns/blaze30
 schedule clear wither:wither/midpoint/particles/down1
 schedule clear wither:wither/midpoint/particles/down2
 schedule clear wither:wither/midpoint/particles/down3

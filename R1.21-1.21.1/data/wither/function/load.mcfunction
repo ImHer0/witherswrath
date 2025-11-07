@@ -2,6 +2,7 @@ scoreboard objectives add witherCount dummy
 
 scoreboard players set witherCount witherCount 0
 scoreboard objectives add checkHealth dummy
+scoreboard objectives add playerCount dummy
 scoreboard objectives add witherCheck dummy
 scoreboard objectives add skullposX dummy
 scoreboard objectives add skullposY dummy
