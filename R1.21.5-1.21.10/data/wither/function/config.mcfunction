@@ -1,0 +1,1 @@
+execute as @s run function wither:wither/toggle/toggle
