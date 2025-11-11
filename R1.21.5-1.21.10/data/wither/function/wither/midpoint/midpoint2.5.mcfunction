@@ -1,6 +1,6 @@
 # Ran by midpointground
 
-execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {Team:"Wither",CustomName:"the Wither's Instability", ExplosionRadius: 10, Invulnerable: 1b, fuse: 0, ignited: 1b, Silent: 1b, attributes:[{id:"minecraft:scale",base:0.0625}]}
+execute as @e[type=minecraft:wither] at @s run summon minecraft:creeper ~ ~1 ~ {DeathLootTable: "wither:entities/withermobs",Team:"Wither",CustomName:"the Wither's Instability", ExplosionRadius: 10, Invulnerable: 1b, Fuse: 0, ignited: 1b, Silent: 1b, attributes:[{id:"minecraft:scale",base:0.0625}]}
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {CustomNameVisible: 0b, NoAI: 0b, attributes:[{id:"minecraft:armor",base:6},{id:"minecraft:armor_toughness",base:6}]}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:lightning_bolt ~ ~ ~ {}
 

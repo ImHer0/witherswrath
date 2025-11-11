@@ -1,3 +1,7 @@
+execute if score fireTck rules matches 1 run gamerule doFireTick true
+execute if score dayCycl rules matches 1 run gamerule doDaylightCycle true
+execute if score mobGrf rules matches 1 run gamerule mobGriefing true
+
 scoreboard objectives remove Health
 scoreboard objectives remove wcharge1
 scoreboard objectives remove witherCount

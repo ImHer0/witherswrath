@@ -4,3 +4,6 @@
 assets/
 Bedrock/
 r1.21.6/
+.github/workflows/README.md
+/__pycache__
+requirements.txt

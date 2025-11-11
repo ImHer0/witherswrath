@@ -19,3 +19,4 @@ execute if score witherCount witherCount matches 1 run schedule function wither:
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/unstuck/check 15s
 execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/fight_start/tick 1t
 execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Bedrock} run schedule function wither:wither/fight_start/bedrock 1t
+execute if score witherCount witherCount matches 1 run schedule function wither:wither/safemode 24000t
