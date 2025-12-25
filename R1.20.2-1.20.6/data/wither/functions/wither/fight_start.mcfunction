@@ -12,7 +12,7 @@ execute if score witherCount witherCount matches 1 run schedule function wither:
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/fight_start/init 1t
 execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/passive/skull 12s
 execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/phase1/check_player_tick 12s
-execute if score witherCount witherCount matches 1 if data storage wither:options {toggleanimation:Default} run schedule function wither:wither/fight_start/part 1t
+execute if score witherCount witherCount matches 1 unless data storage wither:options {toggleanimation:Disabled} run schedule function wither:wither/fight_start/part 1t
 execute if score witherCount witherCount matches 1 if data storage wither:options {togglehoming:Enabled} run schedule function wither:wither/phase2/homing/homingpre 10s
 execute if score witherCount witherCount matches 1 if data storage wither:options {togglespawns:Enabled} run schedule function wither:wither/passive/spawn 15s
 execute if score witherCount witherCount matches 1 run schedule function wither:wither/lifecycle/spawn 219t
