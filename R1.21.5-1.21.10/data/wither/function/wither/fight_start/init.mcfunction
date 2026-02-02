@@ -14,9 +14,8 @@ team modify Wither friendlyFire false
 # ASTHETICS
 
 execute if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggleweather:Enabled} run weather thunder
-execute if score fireTck rules matches 1 run gamerule doFireTick false
-execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle false
-execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mobGriefing false
+execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time false
+execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mob_griefing false
 
 # TIME SET NIGHT Without the day reset ;)
 
@@ -76,5 +75,7 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge e
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} as @e[type=player,distance=..100] run attribute @s minecraft:gravity modifier add 1 0.05 add_value
 
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] run function wither:wither/passive/convert
+
+schedule function wither:wither/failsafe 900s
 
 

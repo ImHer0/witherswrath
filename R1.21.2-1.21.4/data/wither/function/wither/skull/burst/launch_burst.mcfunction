@@ -1,7 +1,7 @@
 scoreboard players add count burstcount 1
 
 execute as @e[type=minecraft:wither,limit=1] at @s run rotate @s facing entity @p eyes
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:wither_skull ^ ^3 ^2 {Tags:["burstlaunch"],Motion:[0.05,0.03,0.05],Fire:200,CustomName:'"burst wither skulls"'}
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon minecraft:wither_skull ^ ^3 ^2 {Tags:["burstlaunch"],Motion:[0.05,0.09,0.05],Fire:200,CustomName:"burst wither skulls"}
 
 # Store the Target's position in storage
 execute as @e[type=minecraft:wither_skull,tag=burstlaunch] at @s store result score @s skullposX run data get entity @s Pos[0] 1000
@@ -36,5 +36,4 @@ execute as @e[type=minecraft:wither_skull,tag=burstlaunch,sort=nearest] at @s ru
 
 
 execute as @e[type=minecraft:wither_skull,tag=burstlaunch] run function wither:wither/skull/burst/launch_burst_remove
-
 

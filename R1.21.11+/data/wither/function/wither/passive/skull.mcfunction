@@ -15,5 +15,5 @@ execute as @e[type=minecraft:wither_skull,nbt={dangerous:1b},tag=buff,limit=1] a
 execute as @e[type=minecraft:wither_skull,nbt={dangerous:1b},tag=buff,limit=1] at @s anchored eyes positioned ^ ^ ^ unless block ^ ^ ^1 air unless block ^ ^ ^1 water run kill @s
 execute as @e[type=minecraft:wither_skull,nbt={dangerous:1b},limit=1,tag=buff] run kill @s 
 
-execute if entity @e[type=minecraft:wither] run schedule function wither:wither/passive/skull 1t
+execute if score witherCount witherCount matches 1.. run schedule function wither:wither/passive/skull 1t
 

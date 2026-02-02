@@ -1,3 +1,5 @@
+# Ran by charge.mcfunction
+
 kill @e[type=minecraft:armor_stand,sort=nearest,tag=wStand]
 data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {NoAI: 0b}
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s if data storage wither:options {toggledestruction:Disabled} run tp @s @e[type=armor_stand,limit=1,tag=chargew]

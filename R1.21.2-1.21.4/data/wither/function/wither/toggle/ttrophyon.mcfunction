@@ -1,3 +1,3 @@
-data modify storage wither:options toggletrophy set value 1
+data modify storage wither:options toggletrophy set value Enabled
 
 # Could make this show config again

@@ -17,5 +17,5 @@ execute at @e[type=wither,limit=1,sort=nearest] as @e[nbt={Tags:["sMarked"]}] ru
 
 execute at @e[type=wither,limit=1,sort=nearest] as @e[nbt={Tags:["sMarked"]}] run kill @s
 
-execute if entity @e[type=wither,limit=1,sort=nearest] as @e[type=wither,limit=1,sort=nearest] run schedule function wither:wither/passive/convert 2s
+execute if score witherCount witherCount matches 1.. run schedule function wither:wither/passive/convert 2s
 

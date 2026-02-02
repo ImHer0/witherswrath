@@ -1,6 +1,6 @@
 # TIME
 execute if data storage wither:options {toggleweather:Enabled} run time add 1000t
-execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle true
+execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advanceTime true
 weather clear
 
 # ONE-TIME ONLY: Removing this tag will stop the adv from triggering

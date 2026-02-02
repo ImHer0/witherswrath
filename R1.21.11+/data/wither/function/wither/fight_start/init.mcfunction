@@ -76,4 +76,6 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither
 
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] run function wither:wither/passive/convert
 
+schedule function wither:wither/failsafe 900s
+
 
