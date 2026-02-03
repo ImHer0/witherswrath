@@ -2,6 +2,6 @@ execute if data storage wither:options {toggleanimation:Default} as @e[type=mine
 
 execute if data storage wither:options {toggleanimation:Default} as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.hurt hostile @a ~ ~ ~ 1 0.5
 
-execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.spawn hostile @e[type=player,distance=..50] ~ ~ ~ 1 1
+execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:entity.wither.spawn hostile @e[type=player,distance=..50] ~ ~ ~ 1 1
 
-execute if score witherCount witherCount matches 1.. run schedule function wither:wither/fight_start/part 1s
+execute if entity @e[type=minecraft:wither] run schedule function wither:wither/fight_start/part 1s

@@ -74,5 +74,4 @@ execute rotated ~ 0 if block ~ ~0.5 ~ water run data merge entity @e[type=minecr
     execute if block ~ ~8 ~ bedrock run function wither:wither/motion/down
     execute if block ~ ~9 ~ bedrock run function wither:wither/motion/down
 
-# Break natural blocks around wither (excludes bedrock, builds, etc)
-execute at @e[type=minecraft:wither,limit=1] run fill ~-2 ~ ~-2 ~2 ~2 ~2 air replace #wither:breakable
+schedule function wither:wither/unstuck/break 5t

@@ -37,7 +37,6 @@ advancement revoke @a only wither:wither/hit2_wither
 advancement revoke @a only wither:wither/hit3_wither
 advancement revoke @a only wither:wither/hit4_wither
 advancement revoke @a only wither:wither/hit5_wither
-advancement revoke @a only wither:wither/hit6_wither
 advancement revoke @a only wither:wither/prehit_wither
 
 schedule clear wither:wither/bedrock/death/deadbedrock1t
@@ -66,6 +65,7 @@ schedule clear wither:wither/phase2/enraged/skulls/1
 schedule clear wither:wither/phase2/enraged/skulls/2
 schedule clear wither:wither/phase2/enraged/skulls/3
 schedule clear wither:wither/skull/launch_end
+schedule clear wither:wither/skull/burst/launch_burst_loop
 schedule clear wither:wither/unstuck/check
 schedule clear wither:wither/fight_start/part
 schedule clear wither:wither/fight_start/tick
@@ -152,8 +152,8 @@ kill @e[type=armor_stand,tag=chargew]
 kill @e[type=armor_stand,tag=midpointpos]
 execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count:1}},limit=1,tag=] run kill @e[type=experience_orb,sort=nearest,distance=..10]
 
-execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
+execute as @e[type=player] run attribute @s minecraft:generic.gravity modifier remove 1
 
 function wither:load
 
-tellraw @s {"text":"Wither's Wrath has been fixed!",bold:true,color:"#5e0000"}
+tellraw @s {"text":"Wither's Wrath has been fixed!","bold":true,"color":"#5e0000"}

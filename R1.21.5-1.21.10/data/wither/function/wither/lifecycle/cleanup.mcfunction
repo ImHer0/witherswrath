@@ -10,8 +10,8 @@ scoreboard players set enraged wenraged 0
 
 # DAYBREAK
     execute if data storage wither:options {toggleweather:Enabled} run weather clear 10000t
-    execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time true
-    execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mob_griefing true
+    execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle true
+    execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mobGriefing true
 
     schedule function wither:xp/xp 1t
 

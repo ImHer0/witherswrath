@@ -4,4 +4,3 @@ execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound mi
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run summon wind_charge ~ ~ ~ {Team:"Wither",Tags:["wither_dash"],acceleration_power:2d,Motion:[0.0,-10.0,0.0]}
 
 schedule function wither:wither/phase2/dashes/dashto 1t
-

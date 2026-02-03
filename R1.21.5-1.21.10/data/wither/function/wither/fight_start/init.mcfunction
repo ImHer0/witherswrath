@@ -14,8 +14,8 @@ team modify Wither friendlyFire false
 # ASTHETICS
 
 execute if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggleweather:Enabled} run weather thunder
-execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time false
-execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mob_griefing false
+execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle false
+execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mobGriefing false
 
 # TIME SET NIGHT Without the day reset ;)
 
