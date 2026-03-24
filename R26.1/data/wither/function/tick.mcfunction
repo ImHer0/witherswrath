@@ -11,6 +11,7 @@ execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run
 
 # Check for Mace with Density on nearest player
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @p[sort=nearest] if items entity @s weapon.mainhand mace[enchantments~[{id:"minecraft:density"}]] run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:resistance",amplifier:2,duration:10,show_particles:0b}]}
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @p[sort=nearest] if items entity @s weapon.mainhand #spears run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:resistance",amplifier:2,duration:10,show_particles:0b}]}
 
 # WITHER CHECK
 execute unless score witherCount witherCount matches 1.. run schedule clear wither:wither/phase2/charge/chargepre
