@@ -1,5 +1,7 @@
 # Ran by advancements for summoning the Wither
 advancement revoke @s only wither:wither/hit_wither
 
+function wither:wither/hit/process_damage
 
-# Nothing atm
+function wither:wither/hit/process_damage
+

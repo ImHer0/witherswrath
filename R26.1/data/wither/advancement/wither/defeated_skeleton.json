@@ -1,0 +1,17 @@
+{
+    
+    "criteria": {
+        "killed_skeleton": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:wither_skeleton",
+                    "nbt" : "{Tags:[\"wSkel\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "wither:wither/skeleton"
+    }
+}

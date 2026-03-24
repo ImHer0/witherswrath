@@ -1,0 +1,8 @@
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] run particle minecraft:dust_plume ~ ~ ~ 1 0.2 1 0.0000001 500 force @e[distance=..20,type=player]
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] run particle minecraft:soul_fire_flame ~ ~ ~ 1 0.2 1 0.0000001 400 force @e[distance=..20,type=player]
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] run particle minecraft:large_smoke ~ ~ ~ 1 0.2 1 0.0000001 300 force @e[distance=..20,type=player]
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] run playsound minecraft:block.stone.break block @e[distance=..50,type=player] ~ ~ ~ 1 0.5
+
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @e[type=minecraft:player,distance=0.9..1.6] at @s run effect give @s levitation 1 100 true
+
+schedule function wither:wither/midpoint/particles/down3 1t

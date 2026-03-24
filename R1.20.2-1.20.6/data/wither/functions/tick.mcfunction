@@ -20,5 +20,6 @@ execute unless score witherCount witherCount matches 1.. run schedule clear with
 
 # WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
 
-execute as @e[type=wither,tag=!Wither] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
-execute as @e[type=wither,tag=!Dash] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
+execute as @e[type=wither,tag=!Wither,tag=!HighDPS] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
+execute as @e[type=wither,tag=!Dash,tag=!HighDPS] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
+

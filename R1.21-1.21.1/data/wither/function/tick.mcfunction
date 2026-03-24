@@ -8,6 +8,9 @@ execute at @p as @e[type=minecraft:wither,limit=1,sort=nearest] store result sco
 execute at @p as @e[type=minecraft:wither,limit=1,sort=furthest] store result score @s checkHealth run data get entity @s Health
 execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run data get entity @s Health
 
+# Check for Mace with Density on nearest player
+execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @p[sort=nearest] if items entity @s weapon.mainhand mace[enchantments~[{id:"minecraft:density"}]] run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:resistance",amplifier:2,duration:10,show_particles:0b}]}
+
 
 # WITHER CHECK
 execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither/phase2/charge/chargepre
@@ -16,5 +19,6 @@ execute unless entity @e[type=minecraft:wither] run schedule clear wither:wither
 
 # WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
 
-execute as @e[type=wither,tag=!Wither] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
-execute as @e[type=wither,tag=!Dash] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
+execute as @e[type=wither,tag=!Wither,tag=!HighDPS] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
+execute as @e[type=wither,tag=!Dash,tag=!HighDPS] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
+

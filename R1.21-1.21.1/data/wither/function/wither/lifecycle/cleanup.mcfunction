@@ -13,11 +13,12 @@ scoreboard players set enraged wenraged 0
     execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule doDaylightCycle true
     execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mobGriefing true
 
-schedule function wither:xp/xp 1t
+    schedule function wither:xp/xp 1t
 
 
 # MUSIC
     schedule clear wither:wither/phase2/musicphase2
+    schedule clear wither:wither/failsafe
     execute as @a run stopsound @a record minecraft:wither.phase2
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run playsound minecraft:wither.death hostile @a ~ ~ ~ 1 1
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 0.9
@@ -26,8 +27,8 @@ schedule function wither:xp/xp 1t
 
 # PEACE
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=wither_skeleton,distance=..100]
-    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wither_dash]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wSkel]
+    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wither_dash]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wArcher]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=zombie,distance=..80]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=creeper,distance=..80]
