@@ -7,6 +7,7 @@ data modify storage wither:options toggledash set value Enabled
 data modify storage wither:options toggleboomtp set value Enabled
 data modify storage wither:options togglespawns set value Enabled
 data modify storage wither:options toggleweather set value Enabled
+data modify storage wither:options spawnreq set value Disabled
 
 
 # Animations [Disabled, Default, Bedrock]

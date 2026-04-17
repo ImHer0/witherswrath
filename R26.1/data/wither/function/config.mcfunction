@@ -1,1 +1,1 @@
-execute as @s run function wither:wither/toggle/toggle
+execute as @s run function wither:dialog/main

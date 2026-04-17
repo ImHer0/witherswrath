@@ -1,3 +1,4 @@
 data modify storage wither:options toggletrophy set value Enabled
+data modify storage wither:options toggletrophy_string set value '"#13e800"'
 
-# Could make this show config again
+function wither:dialog/main

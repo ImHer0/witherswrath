@@ -1,7 +1,5 @@
-# ON
-execute if data storage wither:options {toggledash:Disabled} as @p run schedule function wither:wither/toggle/tdashon 1t
-execute if data storage wither:options {toggledash:Disabled} run tellraw @s ["",{"text":"Dashes",bold:true,color:"#575757"},{"text":" have been ",color:"#575757"},{"text":"enabled!",color:"#13e800"}]
+# Disabled -> Enabled
+execute if data storage wither:options {toggledash:"Disabled"} run return run function wither:wither/toggle/tdashon
 
-# OFF
-execute if data storage wither:options {toggledash:Enabled} as @p run schedule function wither:wither/toggle/tdashoff 1t
-execute if data storage wither:options {toggledash:Enabled} run tellraw @s ["",{"text":"Dashes",bold:true,color:"#575757"},{"text":" have been ",color:"#575757"},{"text":"disabled!",color:"#e80f00"}]
+# Enabled -> Disabled
+execute if data storage wither:options {toggledash:"Enabled"} run return run function wither:wither/toggle/tdashoff

@@ -31,5 +31,5 @@ execute if entity @e[type=minecraft:wither] run tellraw @a ["",{"text":"[ᴡɪ�
 execute if entity @e[type=minecraft:wither] run function wither:wither/fix
 
 # prevents storage from being set if already initialized previously (saves current settings if any)
-execute unless data storage wither:options {initialized:2} run function wither:initialize_storage
+execute unless data storage wither:options {initialized:3} run function wither:initialize_storage
 
