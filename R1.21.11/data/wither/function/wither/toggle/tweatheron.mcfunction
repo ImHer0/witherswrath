@@ -1,3 +1,4 @@
 data modify storage wither:options toggleweather set value Enabled
+data modify storage wither:options toggleweather_string set value '"#13e800"'
 
 function wither:dialog/main

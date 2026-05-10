@@ -7,3 +7,5 @@ r1.21.6/
 .github/workflows/README.md
 /__pycache__
 requirements.txt
+addons/
+R26.1-beta/
