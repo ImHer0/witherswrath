@@ -1,0 +1,25 @@
+{
+  "rewards": {
+    "function": "wither:wither/hit/prehit"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": false
+              }
+            ]
+          }
+        },
+        "entity": {
+          "minecraft:entity_type": "minecraft:wither"
+        }
+      }
+    }
+  }
+}
