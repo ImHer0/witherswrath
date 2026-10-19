@@ -10,14 +10,18 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_projectile",
+                "id": "#minecraft:is_projectile",
                 "expected": false
               }
             ]
           }
         },
         "entity": {
-          "minecraft:entity_type": "minecraft:wither"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither"
+          }
         }
       }
     }

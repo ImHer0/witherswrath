@@ -60,6 +60,7 @@ body:
       description: Which versions would benefit from this feature?
       multiple: true
       options:
+        - "26.3+"
         - "1.21.5+"
         - "1.21.2-1.21.4"
         - "1.21-1.21.1"

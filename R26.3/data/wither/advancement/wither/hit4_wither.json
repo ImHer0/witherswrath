@@ -7,8 +7,12 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "minecraft:entity_type": "minecraft:wither",
-          "nbt": "{Tags:[\"Dash\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither",
+            "minecraft:nbt": "{Tags:[\"Dash\"]}"
+          }
         }
       }
     }
