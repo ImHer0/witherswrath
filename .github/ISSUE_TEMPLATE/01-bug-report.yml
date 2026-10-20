@@ -39,6 +39,8 @@ body:
       label: Minecraft Version
       description: What version of Minecraft are you using?
       options:
+        - "26.3+"
+        - "26.1-26.2"
         - "1.21.5+"
         - "1.21.2-1.21.4"
         - "1.21-1.21.1"
