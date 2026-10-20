@@ -23,3 +23,6 @@ execute unless score witherCount witherCount matches 1.. run schedule clear with
 
 execute as @e[type=wither,tag=!Wither,tag=!HighDPS] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
 execute as @e[type=wither,tag=!Dash,tag=!HighDPS] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
+
+# ENRAGED WITHER CAN'T HEAL (UNLESS NOT HIT FOR 5S)
+execute if score enraged wenraged matches 1 as @e[type=wither,tag=theWither] run function wither:wither/phase2/enraged/no_heal
