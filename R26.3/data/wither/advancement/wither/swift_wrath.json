@@ -1,0 +1,24 @@
+{
+    "parent": "minecraft:nether/summon_wither",
+    "display": {
+        "icon": {
+            "id": "minecraft:clock"
+        },
+        "title": {
+            "text": "Swift Wrath",
+            "color": "#8F09CE"
+        },
+        "description": {
+            "text": "Defeat the Wither's Wrath in under 5 minutes"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "granted": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

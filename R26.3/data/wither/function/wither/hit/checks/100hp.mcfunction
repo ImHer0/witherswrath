@@ -13,8 +13,8 @@ playsound block.anvil.land master @a ~ ~ ~ 5 .1
 playsound entity.player.attack.crit master @a ~ ~ ~ 5 0.5
 
 # Particles
-particle campfire_cosy_smoke ~ ~ ~ 2 2 2 0.1 300
-particle lava ~ ~ ~ 2 3 2 0.5 100
+particle campfire_cosy_smoke ~ ~ ~ 2 2 2 0.1 75
+particle lava ~ ~ ~ 2 3 2 0.5 30
 
 # Explosion
 summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:15b,powered:1b,Silent:1b,CustomName:"Wither Nuke",Team:"Wither",attributes:[{id:"minecraft:scale",base:0.0625}]}

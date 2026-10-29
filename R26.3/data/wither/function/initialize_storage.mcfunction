@@ -8,6 +8,7 @@ data modify storage wither:options toggleboomtp set value Enabled
 data modify storage wither:options togglespawns set value Enabled
 data modify storage wither:options toggleweather set value Enabled
 data modify storage wither:options spawnreq set value Disabled
+data modify storage wither:options togglescaling set value Enabled
 data modify storage wither:options toggletrophy_string set value '"#13e800"'
 data modify storage wither:options toggledestruction_string set value '"#13e800"'
 data modify storage wither:options togglehoming_string set value '"#13e800"'
@@ -17,6 +18,7 @@ data modify storage wither:options toggleboomtp_string set value '"#13e800"'
 data modify storage wither:options togglespawns_string set value '"#13e800"'
 data modify storage wither:options toggleweather_string set value '"#13e800"'
 data modify storage wither:options spawnreq_string set value '"#e80f00"'
+data modify storage wither:options togglescaling_string set value '"#13e800"'
 
 # Animations 0 = enabled, 1 = disabled, 2 = bedrock
 data modify storage wither:options toggleanimation set value Default

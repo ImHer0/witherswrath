@@ -11,7 +11,7 @@ data merge entity @s {active_effects:[{id:"minecraft:instant_damage",amplifier:1
 playsound entity.wither.spawn master @a ~ ~ ~ 10 0.5
 playsound item.goat_horn.sound.0 master @a ~ ~ ~ 10 0.5
 
-particle angry_villager ~ ~ ~ 3 3 3 1 100
+particle angry_villager ~ ~ ~ 3 3 3 1 30
 
 # Trigger hit functions
 # From hit3

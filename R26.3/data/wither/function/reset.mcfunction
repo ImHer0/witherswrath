@@ -19,6 +19,8 @@ data remove storage wither:options toggleboomtp_string
 data remove storage wither:options togglespawns_string
 data remove storage wither:options toggleweather_string
 data remove storage wither:options spawnreq_string
+data remove storage wither:options togglescaling
+data remove storage wither:options togglescaling_string
 data remove storage wither:options toggleanimation_string
 data remove storage wither:options initialized
 

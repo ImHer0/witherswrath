@@ -1,3 +1,7 @@
+# Guard: the midpoint can only ever run once per fight
+scoreboard players set #midDone wither.stats 1
+scoreboard players set #midT wither.stats 0
+
 # TIME
 execute if data storage wither:options {toggleweather:Enabled} run time add 1000t
 execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time true
@@ -17,10 +21,10 @@ execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=with
 execute if data storage wither:options {toggleanimation:Bedrock} as @e[type=wither,limit=1,sort=nearest] run schedule function wither:wither/midpoint/midpointbedrock 10t
 
 # GO UP GO DOWN 
-execute if data storage wither:options {toggleanimation:Default} at @e[type=wither,limit=1,sort=nearest] align xyz positioned ~.5 ~.5 ~.5 run summon armor_stand ~ ~ ~ {Team:"Wither",Invisible:1b,Tags:["midpointpos"],attributes:[{id:"minecraft:scale",base:2}]}
+execute if data storage wither:options {toggleanimation:Default} at @e[type=wither,limit=1,sort=nearest] align xyz positioned ~.5 ~.5 ~.5 run summon armor_stand ~ ~ ~ {Team:"Wither",Invisible:1b,Invulnerable:1b,Tags:["midpointpos"],attributes:[{id:"minecraft:scale",base:2}]}
 
 # BREAK BOX + SFX
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggledestruction:Enabled} run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} if data storage wither:options {toggledestruction:Enabled} run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace #wither:destructible
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.break_block block @a[distance=..30] ~ ~ ~ 0.5 .1
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} run playsound minecraft:entity.wither_skeleton.hurt hostile @a[distance=..30] ~ ~ ~ 0.5 0.1
 

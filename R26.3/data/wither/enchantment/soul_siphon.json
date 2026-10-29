@@ -1,0 +1,39 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "text": "Soul Siphon",
+    "color": "dark_aqua"
+  },
+  "max_cost": {
+    "base": 1,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/weapon",
+  "weight": 1,
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "attacker",
+        "enchanted": "attacker",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "wither:wither/passive/variants/lifesteal"
+        },
+        "requirements": {
+          "type": "minecraft:damage_source_properties",
+          "predicate": {
+            "is_direct": true
+          }
+        }
+      }
+    ]
+  }
+}

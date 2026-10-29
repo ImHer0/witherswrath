@@ -29,8 +29,14 @@ scoreboard objectives remove wither.temp.py
 scoreboard objectives remove wither.temp.pz
 scoreboard objectives remove rules
 scoreboard objectives remove stages
+scoreboard objectives remove wither.scale
+scoreboard objectives remove wither.stats
+scoreboard objectives remove wither.dmg
+scoreboard objectives remove wither.deaths
+scoreboard objectives remove wither.variant
 
 team remove Wither
+team remove WitherElite
 
 advancement revoke @a only wither:wither/defeated_skeleton
 advancement revoke @a only wither:wither/defeated_wither
@@ -41,6 +47,8 @@ advancement revoke @a only wither:wither/hit4_wither
 advancement revoke @a only wither:wither/hit5_wither
 advancement revoke @a only wither:wither/hit6_wither
 advancement revoke @a only wither:wither/prehit_wither
+advancement revoke @a only wither:wither/swift_wrath
+advancement revoke @a only wither:wither/untouchable
 
 schedule clear wither:wither/bedrock/death/deadbedrock1t
 schedule clear wither:wither/bedrock/death/deadbedrock2t
@@ -119,6 +127,10 @@ schedule clear wither:wither/midpoint/particles/clearlev
 schedule clear wither:wither/passive/skull
 schedule clear wither:wither/passive/spawn
 schedule clear wither:wither/passive/convert
+schedule clear wither:wither/passive/variants/miniskull_tick
+schedule clear wither:nether_star/tick
+schedule clear wither:wither/fight_start/showcase/loop
+schedule clear wither:stats/show
 schedule clear wither:wither/skull
 schedule clear wither:wither_check
 schedule clear wither:5tick

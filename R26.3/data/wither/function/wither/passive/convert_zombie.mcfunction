@@ -1,0 +1,3 @@
+summon zombified_piglin ~ ~.01 ~ {Team:"Wither",equipment:{head:{id:"minecraft:bone",count:1,components:{"minecraft:item_model":"minecraft:air","minecraft:enchantments":{"wither:witherbound":1}}}},drop_chances:{head:0},DeathLootTable: "wither:entities/withermobs", Tags: ["wSkel"], attributes: [{id: "max_health", base: 10}], anger_end_time:999999, Health: 10}
+data merge entity @s {Silent:1b,DeathLootTable:"wither:entities/withermobs",equipment:{head:{id:"minecraft:bone",count:1}},active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:20,show_particles:0b}],attributes:[{id:"minecraft:scale",base:0.0625}]}
+kill @s

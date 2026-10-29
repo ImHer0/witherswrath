@@ -1,7 +1,12 @@
 team remove Wither
 scoreboard players set wCharge wcharge1 1
+scoreboard players set #midDone wither.stats 0
+scoreboard players set midpoint stages 0
 scoreboard players set wspawn spawn 0
 scoreboard players set witherCount witherCount 0
+scoreboard players set #lost wither.stats 0
+scoreboard players set count burstcount 0
+data remove storage wither:fight last
 scoreboard players set wChargereset wchargereset 0
 scoreboard players set enraged wenraged 0
 
@@ -26,11 +31,14 @@ scoreboard players set enraged wenraged 0
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 100 .85
 
 # PEACE
+    kill @e[tag=wIntro]
+    kill @e[type=minecraft:wither_skull]
+    kill @e[type=minecraft:small_fireball]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=wither_skeleton,distance=..100]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wSkel]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wither_dash]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wArcher]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=zombie,distance=..80]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=creeper,distance=..80]
-    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=armor_stand,tag=hStand,distance=..100]
+    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=item_display,tag=hStand,distance=..100]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=armor_stand,tag=chargew,distance=..100]

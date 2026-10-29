@@ -1,0 +1,25 @@
+# Macro: r. A ring of soul fire and soul sand debris at radius r around the ground marker
+$execute rotated 0.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 0.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 22.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 45.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 45.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 67.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 90.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 90.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 112.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 135.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 135.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 157.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 180.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 180.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 202.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 225.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 225.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 247.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 270.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 270.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 292.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 315.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal
+$execute rotated 315.0 0 positioned ^ ^0.2 ^$(r) run particle minecraft:block{block_state:"minecraft:soul_sand"} ~ ~ ~ 0.2 0.05 0.2 0 3 normal
+$execute rotated 337.5 0 positioned ^ ^0.2 ^$(r) run particle minecraft:soul_fire_flame ~ ~ ~ 0.1 0.05 0.1 0.01 2 normal

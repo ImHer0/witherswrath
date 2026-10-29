@@ -1,25 +1,12 @@
-
-# Checks for alive wither every tick
+# Checks for newly summoned withers every tick
 execute as @e[type=minecraft:wither,tag=!theWither,limit=1] at @s run tag @s add justSummoned
 execute as @e[type=minecraft:wither,tag=justSummoned,limit=1] at @s run function wither:wither/fight_once
 
+# Soulpiercer multishot (only while one exists)
+execute if entity @e[type=minecraft:wither_skeleton,tag=wArcherV,limit=1] run function wither:wither/passive/variants/archer_arrows
 
-# CHECKS HEALTH EVERY TICK
-execute at @p as @e[type=minecraft:wither,limit=1,sort=nearest] store result score @s checkHealth run data get entity @s Health
-execute at @p as @e[type=minecraft:wither,limit=1,sort=furthest] store result score @s checkHealth run data get entity @s Health
-execute as @e[type=wither,limit=1,sort=nearest] store result score @s Health run data get entity @s Health
+# Fight logic only runs while a fight is active
+execute if score witherCount witherCount matches 1.. run return run function wither:tick_fight
 
-# Check for Mace with Density on nearest player
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @p[sort=nearest] if items entity @s weapon.mainhand mace[minecraft:enchantments~[{enchantment:"minecraft:density"}]] run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:resistance",amplifier:2,duration:10,show_particles:0b}]}
-execute at @e[type=minecraft:wither,limit=1,sort=nearest] as @p[sort=nearest] if items entity @s weapon.mainhand #minecraft:spears run data merge entity @e[type=wither,limit=1,sort=nearest] {active_effects:[{id:"minecraft:resistance",amplifier:2,duration:10,show_particles:0b}]}
-
-# WITHER CHECK
-execute unless score witherCount witherCount matches 1.. run schedule clear wither:wither/phase2/charge/chargepre
-execute unless score witherCount witherCount matches 1.. run schedule clear wither:wither/phase1/homing/homingpre
-execute unless score witherCount witherCount matches 1.. run schedule clear wither:wither/passive/spawn
-
-
-# WITHER HEALTH NEVER ABOVE HALF AFTER HITTING IT
-
-execute as @e[type=wither,tag=!Wither,tag=!HighDPS] if score @s Health matches 298.. run data modify entity @s Health set value 298.0f
-execute as @e[type=wither,tag=!Dash,tag=!HighDPS] if score @s Health matches 100.. run data modify entity @s Health set value 98.0f
+# No fight: clear leftover attack loops once instead of every tick
+execute unless score #idle wither.stats matches 1 run function wither:tick_idle

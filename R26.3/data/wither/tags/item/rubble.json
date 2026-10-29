@@ -1,0 +1,14 @@
+{
+    "values": [
+        "minecraft:dirt", "minecraft:coarse_dirt", "minecraft:rooted_dirt", "minecraft:mud", "minecraft:clay_ball",
+        "minecraft:cobblestone", "minecraft:cobbled_deepslate", "minecraft:mossy_cobblestone", "minecraft:andesite",
+        "minecraft:diorite", "minecraft:granite", "minecraft:tuff", "minecraft:calcite", "minecraft:dripstone_block",
+        "minecraft:sand", "minecraft:red_sand", "minecraft:gravel", "minecraft:flint", "minecraft:sandstone",
+        "minecraft:red_sandstone", "minecraft:netherrack", "minecraft:soul_sand", "minecraft:soul_soil",
+        "minecraft:basalt", "minecraft:blackstone", "minecraft:end_stone", "minecraft:snowball", "minecraft:stick",
+        "minecraft:wheat_seeds", "minecraft:moss_block", "minecraft:pale_moss_block",
+        {"id": "#minecraft:saplings", "required": false},
+        {"id": "#minecraft:small_flowers", "required": false},
+        {"id": "#minecraft:terracotta", "required": false}
+    ]
+}
