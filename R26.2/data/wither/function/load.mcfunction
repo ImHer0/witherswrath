@@ -25,6 +25,9 @@ scoreboard objectives add wither.temp.pz dummy
 scoreboard objectives add wither.lastHealth dummy
 scoreboard objectives add wither.currentHealth dummy
 scoreboard objectives add wither.diff dummy
+scoreboard objectives add wither.healCap dummy
+scoreboard objectives add wither.noHit dummy
+scoreboard objectives add wither.blast dummy
 function wither:wither/safemode
 
 execute if entity @e[type=minecraft:wither] run tellraw @a ["",{"text":"[ᴡɪᴛʜᴇʀ'ꜱ ᴡʀᴀᴛʜ] ","bold":true,"color":"#322A32"},{"text":"ᴛʜᴇ ᴘᴀᴄᴋ ᴡᴀꜱ (ʀᴇ)ʟᴏᴀᴅᴇᴅ ᴡʜɪʟᴇ ᴀ ᴡɪᴛʜᴇʀ ᴡᴀꜱ ᴀʟɪᴠᴇ... ᴋɪʟʟɪɴɢ ɪᴛ!!!","bold":true,"color":"dark_red"}]
