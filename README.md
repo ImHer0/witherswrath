@@ -27,7 +27,7 @@ The wither has **600HP** by default and does additional knockback resistance. It
 
 #### Start "Animation"
 
-![ezgif-5-6c9485f70c](https://github.com/user-attachments/assets/20b73961-c7ac-40e0-b39f-9674e9a57cb0)
+<img width="450" height="253" alt="spawn low res" src="https://github.com/user-attachments/assets/507bb8f9-3aff-4ecd-aecc-1110e67cbb08" />
 
 #### Wither Homing Skull
 
