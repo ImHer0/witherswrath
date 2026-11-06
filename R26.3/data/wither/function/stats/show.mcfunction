@@ -1,5 +1,7 @@
 # Ran 3s after the Wither dies: fight report, best time and challenge advancements
 
+execute if data storage wither:options {toggleanimation:Bedrock} run return 0
+
 # FIGHT TIME (ticks -> m:ss)
 execute store result score #time wither.stats run time query gametime
 scoreboard players operation #time wither.stats -= #start wither.stats

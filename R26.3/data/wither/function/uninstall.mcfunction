@@ -54,6 +54,9 @@ schedule clear wither:wither/bedrock/death/deadbedrock1t
 schedule clear wither:wither/bedrock/death/deadbedrock2t
 schedule clear wither:wither/bedrock/death/deadbedrock3t
 schedule clear wither:wither/bedrock/death/deadbedrock4t
+schedule clear wither:wither/bedrock/death/deadbedrock5t
+schedule clear wither:wither/bedrock/death/deadbedrockendloop
+schedule clear wither:wither/bedrock/death/deadbedrockcry
 schedule clear wither:wither/phase1/check_player_tick
 schedule clear wither:wither/skull/launch
 schedule clear wither:wither/phase1/musicphase1
@@ -86,6 +89,7 @@ schedule clear wither:wither/midpoint/midpoint2
 schedule clear wither:wither/midpoint/midpointtick
 schedule clear wither:wither/midpoint/midpointparttick
 schedule clear wither:wither/midpoint/midpointbedrock
+schedule clear wither:wither/midpoint/midpointbedrock_skeletons
 schedule clear wither:wither/midpoint/midpoint2.5
 schedule clear wither:wither/midpoint/midpointground
 schedule clear wither:wither/midpoint/spawns/blaze1
@@ -166,6 +170,8 @@ data remove storage wither:options togglespawns_string
 data remove storage wither:options toggleweather_string
 data remove storage wither:options spawnreq_string
 data remove storage wither:options toggleanimation_string
+data remove storage wither:options bedrockmode
+data remove storage wither:options bedrockmode_string
 data remove storage wither:options initialized
 data remove storage wither:wither_position input
 data remove storage temp Head

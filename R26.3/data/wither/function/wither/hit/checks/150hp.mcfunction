@@ -1,4 +1,5 @@
 # Check if damage > 150 (Enraged)
+execute if data storage wither:options {toggleanimation:Bedrock} run return 0
 # Trigger enraged mode, play sounds
 
 tellraw @a {"text":"The Wither is enraged!","color":"dark_red",bold:true}
@@ -23,7 +24,7 @@ execute if data storage wither:options {toggleanimation:Default} run function wi
 execute if data storage wither:options {toggledash:Enabled} run function wither:wither/phase2/dashes/dash
 
 # From hit5
-execute if data storage wither:options {toggleanimation:Bedrock} run function wither:wither/bedrock/death/deadbedrock
+execute if score @s Health matches ..30 if data storage wither:options {toggleanimation:Bedrock} run function wither:wither/bedrock/death/deadbedrock
 
 # From hit6
 execute if data storage wither:options {toggleanimation:Default} run function wither:wither/phase2/swarm

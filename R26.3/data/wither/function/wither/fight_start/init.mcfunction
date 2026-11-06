@@ -19,6 +19,8 @@ execute if data storage wither:options {toggleanimation:Default} if data storage
 execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time false
 execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mob_griefing false
 
+execute if data storage wither:options {toggleanimation:Bedrock} run weather thunder
+
 # TIME SET NIGHT Without the day reset ;)
 
 execute store result score wticktime wticktime run time query gametime
@@ -48,8 +50,8 @@ execute if data storage wither:options {toggleweather:Enabled} if score wticktim
 
 
 stopsound @a music
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:wither.10sec record @a[distance=..100] ~ ~ ~ 1 1
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:music.nether.basalt_deltas music @a[distance=..100] ~ ~-2 ~ 2
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s unless data storage wither:options {toggleanimation:Bedrock} run playsound minecraft:wither.10sec record @a[distance=..100] ~ ~ ~ 1 1
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s unless data storage wither:options {toggleanimation:Bedrock} run playsound minecraft:music.nether.basalt_deltas music @a[distance=..100] ~ ~-2 ~ 2
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @e[type=player,distance=..100] run playsound minecraft:entity.parrot.imitate.wither hostile @a ~ ~ ~ 2 0.1
 
 # CHEESING: breaks every block in area above and sides not below to avoid the void
@@ -76,7 +78,7 @@ execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither
 execute as @e[type=minecraft:wither,limit=1,sort=nearest] at @s run data merge entity @e[type=wither,limit=1,sort=nearest] {Health:600f,Tags:["theWither","Bedrock","Charge","Wither","Dash","Swarm"],equipment:{feet:{id:"minecraft:leather_boots",count:1,components:{"minecraft:enchantments":{"minecraft:blast_protection":255},"minecraft:unbreakable":{}}},legs:{id:"minecraft:iron_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}},chest:{id:"minecraft:iron_chestplate",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}},head:{id:"minecraft:leather_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:enchantments":{"minecraft:blast_protection":255}}}},drop_chances:{mainhand:0,feet:0,legs:0,chest:0,head:0},attributes:[{id:"minecraft:follow_range",base:69},{id:"minecraft:knockback_resistance",base:0.5},{id:"minecraft:max_health",base:600},{id:"minecraft:movement_speed",base:0.8},{id:"minecraft:step_height",base:2},{id:"minecraft:explosion_knockback_resistance",base:0.9},{id:"minecraft:armor",base:1},{id:"minecraft:armor_toughness",base:0},{id:"minecraft:flying_speed",base:0}]}
 execute at @e[type=minecraft:wither,limit=1,sort=nearest] if data storage wither:options {toggleanimation:Default} as @e[type=player,distance=..100] run attribute @s minecraft:gravity modifier add 1 0.05 add_value
 
-execute as @e[type=minecraft:wither,limit=1,sort=nearest] run function wither:wither/passive/convert
+execute as @e[type=minecraft:wither,limit=1,sort=nearest] unless data storage wither:options {toggleanimation:Bedrock} run function wither:wither/passive/convert
 
 schedule function wither:wither/failsafe 900s
 

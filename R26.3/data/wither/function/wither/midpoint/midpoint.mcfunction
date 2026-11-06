@@ -5,7 +5,7 @@ scoreboard players set #midT wither.stats 0
 # TIME
 execute if data storage wither:options {toggleweather:Enabled} run time add 1000t
 execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time true
-weather clear
+execute unless data storage wither:options {toggleanimation:Bedrock} run weather clear
 
 # ONE-TIME ONLY: Removing this tag will stop the adv from triggering
 tag @s remove Wither
@@ -100,7 +100,7 @@ execute if data storage wither:options {toggleanimation:Default} run schedule fu
 execute if data storage wither:options {toggleanimation:Default} at @e[type=minecraft:wither,limit=1,sort=nearest] at @s run playsound minecraft:entity.wither.spawn hostile @a[distance=..30] ~ ~ ~ 2 .8
 schedule clear wither:wither/phase1/musicphase1
 execute as @a run stopsound @a record minecraft:wither.phase1
-function wither:wither/phase2/musicphase2
+execute unless data storage wither:options {toggleanimation:Bedrock} run function wither:wither/phase2/musicphase2
 effect give @e[type=wither_skeleton,distance=..20] resistance 3 10
 execute if data storage wither:options {toggleanimation:Default} run data merge entity @e[type=minecraft:wither,limit=1,sort=nearest] {Invulnerable:1b,NoAI:1b,NoGravity:1b,active_effects:[{id:"minecraft:resistance",amplifier:255,duration:5}]}
 

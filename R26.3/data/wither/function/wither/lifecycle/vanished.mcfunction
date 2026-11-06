@@ -9,7 +9,7 @@ kill @e[type=minecraft:armor_stand,tag=midpointpos]
 kill @e[type=minecraft:armor_stand,tag=wStand]
 execute as @a run attribute @s minecraft:gravity modifier remove 1
 stopsound @a record
-$tellraw @a[x=$(x),y=$(y),z=$(z),distance=..128] ["",{"text":"[ᴡɪᴛʜᴇʀ'ꜱ ᴡʀᴀᴛʜ] ","bold":true,"color":"#322A32"},{"text":"The Wither has vanished...","color":"#8F09CE"}]
+$execute unless data storage wither:options {toggleanimation:Bedrock} run tellraw @a[x=$(x),y=$(y),z=$(z),distance=..128] ["",{"text":"[ᴡɪᴛʜᴇʀ'ꜱ ᴡʀᴀᴛʜ] ","bold":true,"color":"#322A32"},{"text":"The Wither has vanished...","color":"#8F09CE"}]
 schedule clear wither:wither_check
 scoreboard players set witherCheck witherCheck 0
 function wither:wither/lifecycle/cleanup

@@ -21,5 +21,5 @@ kill @e[type=armor_stand,tag=wither_spin,limit=1]
 schedule clear wither:wither/fight_start/bedrock_1t
 schedule clear wither:wither/fight_start/part
 
-schedule function wither:wither/phase1/musicphase1 1t
+execute unless data storage wither:options {toggleanimation:Bedrock} run schedule function wither:wither/phase1/musicphase1 1t
 

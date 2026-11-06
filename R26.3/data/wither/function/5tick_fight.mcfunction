@@ -34,10 +34,10 @@ execute at @e[type=minecraft:wither,tag=Bedrock,limit=1] as @e[type=#minecraft:a
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,tag=Bedrock,limit=1] run particle minecraft:mycelium ~ ~1 ~ 1 1 1 0 80 normal
 execute if score enraged wenraged matches 1 at @e[type=minecraft:wither,tag=Bedrock,limit=1] run particle minecraft:trial_omen ~ ~1 ~ 1 1 1 2 10 normal
 
-execute at @e[type=minecraft:wither,tag=Bedrock,limit=1] run particle minecraft:ash ~ ~ ~ 10 10 10 0 60 normal
+execute at @e[type=minecraft:wither,tag=Bedrock,limit=1] unless data storage wither:options {toggleanimation:Bedrock} run particle minecraft:ash ~ ~ ~ 10 10 10 0 60 normal
 
 # 50 HP: the Wither starts falling apart
-execute as @e[type=minecraft:wither,tag=Bedrock,scores={Health=..50}] at @s run function wither:wither/crumble
+execute as @e[type=minecraft:wither,tag=Bedrock,scores={Health=..50}] at @s unless data storage wither:options {toggleanimation:Bedrock} run function wither:wither/crumble
 
 # PHASE CHECKS
 execute if entity @e[type=minecraft:wither,tag=Swarm,limit=1] run function wither:wither/hit/hit6

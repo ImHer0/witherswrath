@@ -19,7 +19,7 @@ execute if score @s wither.diff matches 100..150 run function wither:wither/hit/
 execute if score @s wither.diff matches 50..99 run function wither:wither/hit/checks/50hp
 
 # MULTIPLAYER SCALING: refunds part of normal hits when more players are nearby
-execute if data storage wither:options {togglescaling:Enabled} if score @s wither.diff matches 1..49 run function wither:wither/hit/scaling
+execute unless data storage wither:options {toggleanimation:Bedrock} if data storage wither:options {togglescaling:Enabled} if score @s wither.diff matches 1..49 run function wither:wither/hit/scaling
 
 # FIGHT STATS: credit the hitter
 execute if score @s wither.diff matches 1.. run scoreboard players operation @a[tag=wither.hitter,limit=1] wither.dmg += @s wither.diff
