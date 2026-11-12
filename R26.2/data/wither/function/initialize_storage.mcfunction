@@ -3,7 +3,6 @@ data modify storage wither:options toggletrophy set value Enabled
 data modify storage wither:options toggledestruction set value Enabled
 data modify storage wither:options togglehoming set value Enabled
 data modify storage wither:options togglecharge set value Enabled
-data modify storage wither:options toggledash set value Enabled
 data modify storage wither:options toggleboomtp set value Enabled
 data modify storage wither:options togglespawns set value Enabled
 data modify storage wither:options toggleweather set value Enabled
@@ -12,7 +11,6 @@ data modify storage wither:options toggletrophy_string set value '"#13e800"'
 data modify storage wither:options toggledestruction_string set value '"#13e800"'
 data modify storage wither:options togglehoming_string set value '"#13e800"'
 data modify storage wither:options togglecharge_string set value '"#13e800"'
-data modify storage wither:options toggledash_string set value '"#13e800"'
 data modify storage wither:options toggleboomtp_string set value '"#13e800"'
 data modify storage wither:options togglespawns_string set value '"#13e800"'
 data modify storage wither:options toggleweather_string set value '"#13e800"'

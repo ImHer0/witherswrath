@@ -13,7 +13,8 @@ scoreboard players set enraged wenraged 0
     execute if data storage wither:options {toggleweather:Enabled} if score dayCycl rules matches 1 run gamerule advance_time true
     execute if data storage wither:options {toggledestruction:Disabled} if score mobGrf rules matches 1 run gamerule mob_griefing true
 
-    schedule function wither:xp/xp 1t
+    # XP waits for the death blast if one is charging (death_blast/end drops it)
+    execute unless entity @e[type=marker,tag=death_blast] run schedule function wither:xp/xp 1t
 
 
 # MUSIC
@@ -28,7 +29,6 @@ scoreboard players set enraged wenraged 0
 # PEACE
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=wither_skeleton,distance=..100]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wSkel]
-    execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wither_dash]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[tag=wArcher]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=zombie,distance=..80]
     execute at @e[type=item,sort=nearest,tag=nether_star,limit=1] run kill @e[type=creeper,distance=..80]
