@@ -1,4 +1,3 @@
 data modify storage wither:options toggleanimation set value Disabled
-function wither:wither/toggle/tanimation
-
-# Could make this show config again
+data modify storage wither:options toggleanimation_string set value '"#e80f00"'
+function wither:dialog/main

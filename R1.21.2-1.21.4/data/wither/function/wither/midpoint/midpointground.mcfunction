@@ -7,5 +7,6 @@ schedule function wither:wither/midpoint/particles/down1 1t
 schedule function wither:wither/midpoint/midpoint2.5 5t
 
 scoreboard players set midpoint stages 0
+scoreboard players set #midT wither.stats 0
 
 schedule clear wither:wither/midpoint/midpointtick

@@ -1,0 +1,27 @@
+# Frame 71 (intro tick 142), ran at the Wither: every block's place on its disk
+tp @e[type=minecraft:item_display,tag=wB0,limit=1] ~-1.88 ~1.245 ~1.407
+tp @e[type=minecraft:item_display,tag=wB1,limit=1] ~-1.65 ~1.02 ~2.977
+tp @e[type=minecraft:item_display,tag=wB2,limit=1] ~4.459 ~1.46 ~-1.016
+tp @e[type=minecraft:item_display,tag=wB3,limit=1] ~1.573 ~2.049 ~-3.086
+tp @e[type=minecraft:item_display,tag=wB4,limit=1] ~-4.427 ~2.147 ~1.061
+tp @e[type=minecraft:item_display,tag=wB5,limit=1] ~1.86 ~2.093 ~-1.436
+tp @e[type=minecraft:item_display,tag=wB6,limit=1] ~-3.014 ~2.647 ~-1.45
+tp @e[type=minecraft:item_display,tag=wB7,limit=1] ~0.941 ~0.673 ~4.357
+tp @e[type=minecraft:item_display,tag=wB8,limit=1] ~-1.303 ~3.183 ~-1.352
+tp @e[type=minecraft:item_display,tag=wB9,limit=1] ~2.938 ~0.422 ~1.34
+tp @e[type=minecraft:item_display,tag=wB10,limit=1] ~-0.909 ~2.934 ~-4.312
+tp @e[type=minecraft:item_display,tag=wB11,limit=1] ~-2.977 ~1.411 ~1.795
+tp @e[type=minecraft:item_display,tag=wB12,limit=1] ~4.288 ~0.696 ~1.237
+tp @e[type=minecraft:item_display,tag=wB13,limit=1] ~1.466 ~0.712 ~1.586
+tp @e[type=minecraft:item_display,tag=wB14,limit=1] ~2.839 ~1.393 ~-1.992
+tp @e[type=minecraft:item_display,tag=wB15,limit=1] ~-4.299 ~2.635 ~-1.252
+tp @e[type=minecraft:item_display,tag=wB16,limit=1] ~-2.169 ~2.674 ~0.156
+tp @e[type=minecraft:item_display,tag=wB17,limit=1] ~-1.799 ~2.8 ~-2.764
+tp @e[type=minecraft:item_display,tag=wB18,limit=1] ~-1.397 ~1.043 ~4.306
+tp @e[type=minecraft:item_display,tag=wB19,limit=1] ~1.83 ~0.732 ~2.807
+tp @e[type=minecraft:item_display,tag=wB20,limit=1] ~1.386 ~2.288 ~-4.322
+tp @e[type=minecraft:item_display,tag=wB21,limit=1] ~2.292 ~1.097 ~0.019
+tp @e[type=minecraft:item_display,tag=wB22,limit=1] ~-3.465 ~2.055 ~0.191
+tp @e[type=minecraft:item_display,tag=wB23,limit=1] ~3.009 ~0.458 ~3.215
+tp @e[type=minecraft:item_display,tag=wB24,limit=1] ~0.325 ~2.819 ~-2.07
+tp @e[type=minecraft:item_display,tag=wB25,limit=1] ~3.327 ~0.749 ~-0.388

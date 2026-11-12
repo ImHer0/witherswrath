@@ -1,3 +1,6 @@
+# Put the gamerules the fight changed back first (needs the rules scores, removed below)
+function wither:wither/safemode
+
 scoreboard objectives remove Health
 scoreboard objectives remove wcharge1
 scoreboard objectives remove witherCount
@@ -29,6 +32,7 @@ scoreboard objectives remove rules
 scoreboard objectives remove stages
 
 team remove Wither
+team remove WitherElite
 
 advancement revoke @a only wither:wither/defeated_skeleton
 advancement revoke @a only wither:wither/defeated_wither
@@ -44,6 +48,9 @@ schedule clear wither:wither/bedrock/death/deadbedrock1t
 schedule clear wither:wither/bedrock/death/deadbedrock2t
 schedule clear wither:wither/bedrock/death/deadbedrock3t
 schedule clear wither:wither/bedrock/death/deadbedrock4t
+schedule clear wither:wither/bedrock/death/deadbedrock5t
+schedule clear wither:wither/bedrock/death/deadbedrockendloop
+schedule clear wither:wither/bedrock/death/deadbedrockcry
 schedule clear wither:wither/phase1/check_player_tick
 schedule clear wither:wither/skull/launch
 schedule clear wither:wither/phase1/musicphase1
@@ -76,6 +83,7 @@ schedule clear wither:wither/midpoint/midpoint2
 schedule clear wither:wither/midpoint/midpointtick
 schedule clear wither:wither/midpoint/midpointparttick
 schedule clear wither:wither/midpoint/midpointbedrock
+schedule clear wither:wither/midpoint/midpointbedrock_skeletons
 schedule clear wither:wither/midpoint/midpoint2.5
 schedule clear wither:wither/midpoint/midpointground
 schedule clear wither:wither/midpoint/spawns/blaze1
@@ -117,6 +125,10 @@ schedule clear wither:wither/midpoint/particles/clearlev
 schedule clear wither:wither/passive/skull
 schedule clear wither:wither/passive/spawn
 schedule clear wither:wither/passive/convert
+schedule clear wither:wither/passive/variants/miniskull_tick
+schedule clear wither:nether_star/tick
+schedule clear wither:wither/fight_start/showcase/loop
+schedule clear wither:stats/show
 schedule clear wither:wither/skull
 schedule clear wither:wither_check
 schedule clear wither:5tick
@@ -145,8 +157,9 @@ kill @e[type=wither_skull]
 kill @e[type=item_display,tag=nether_star]
 kill @e[tag=wither_dash]
 kill @e[tag=wSkel]
+kill @e[tag=wIntro]
 kill @e[tag=wArcher]
-kill @e[type=armor_stand,tag=hStand]
+kill @e[type=item_display,tag=hStand]
 kill @e[type=armor_stand,tag=starxp]
 kill @e[type=armor_stand,tag=chargew]
 kill @e[type=armor_stand,tag=midpointpos]
@@ -154,6 +167,10 @@ execute at @e[type=item,sort=nearest,nbt={Item:{id:"minecraft:nether_star",count
 
 execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 
+kill @e[type=minecraft:small_fireball]
+data remove storage wither:fight last
 function wither:load
+# Fix cleared every schedule, including the always-on 5 tick loop: start it again
+schedule function wither:5tick 5t
 
 tellraw @s {"text":"Wither's Wrath has been fixed!","bold":true,"color":"#5e0000"}

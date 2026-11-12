@@ -1,4 +1,5 @@
 # Check if damage > 150 (Enraged)
+execute if data storage wither:options {toggleanimation:Bedrock} run return 0
 # Trigger enraged mode, play sounds
 
 tellraw @a {"text":"The Wither is enraged!","color":"dark_red",bold:true}
@@ -11,7 +12,7 @@ data merge entity @s {active_effects:[{id:"minecraft:instant_damage",amplifier:1
 playsound entity.wither.spawn master @a ~ ~ ~ 10 0.5
 playsound item.goat_horn.sound.0 master @a ~ ~ ~ 10 0.5
 
-particle angry_villager ~ ~ ~ 3 3 3 1 100
+particle angry_villager ~ ~ ~ 3 3 3 1 30
 
 # Trigger hit functions
 # From hit3
@@ -23,7 +24,7 @@ execute if data storage wither:options {toggleanimation:Default} run function wi
 execute if data storage wither:options {toggledash:Enabled} run function wither:wither/phase2/dashes/dash
 
 # From hit5
-execute if data storage wither:options {toggleanimation:Bedrock} run function wither:wither/bedrock/death/deadbedrock
+execute if score @s Health matches ..30 if data storage wither:options {toggleanimation:Bedrock} run function wither:wither/bedrock/death/deadbedrock
 
 # From hit6
 execute if data storage wither:options {toggleanimation:Default} run function wither:wither/phase2/swarm

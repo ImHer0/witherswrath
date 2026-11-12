@@ -1,0 +1,19 @@
+# Ran at the Wither: the white photon ring hugging the black core
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~1.922 ~1.566 ~-1.062 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~2.102 ~1.201 ~-0.416 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~2.028 ~0.896 ~0.281 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~1.71 ~0.687 ~0.944 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~1.186 ~0.602 ~1.493 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~0.518 ~0.648 ~1.861 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-0.212 ~0.822 ~2.006 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-0.916 ~1.101 ~1.908 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-1.51 ~1.453 ~1.581 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-1.922 ~1.834 ~1.062 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-2.102 ~2.199 ~0.416 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-2.028 ~2.504 ~-0.281 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-1.71 ~2.713 ~-0.944 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-1.186 ~2.798 ~-1.493 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~-0.518 ~2.752 ~-1.861 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~0.212 ~2.578 ~-2.006 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~0.916 ~2.299 ~-1.908 0 0 0 0 1 normal
+particle minecraft:dust{color:[1.0,1.0,1.0],scale:1.1} ~1.51 ~1.947 ~-1.581 0 0 0 0 1 normal

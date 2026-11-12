@@ -1,4 +1,3 @@
-data modify storage wither:options toggleanimation set value 2
-function wither:wither/toggle/tanimation
-
-# Could make this show config again
+data modify storage wither:options toggleanimation set value Bedrock
+data modify storage wither:options toggleanimation_string set value '"#13e800"'
+function wither:dialog/main

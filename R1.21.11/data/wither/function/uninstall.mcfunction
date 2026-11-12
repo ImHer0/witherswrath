@@ -29,8 +29,14 @@ scoreboard objectives remove wither.temp.py
 scoreboard objectives remove wither.temp.pz
 scoreboard objectives remove rules
 scoreboard objectives remove stages
+scoreboard objectives remove wither.scale
+scoreboard objectives remove wither.stats
+scoreboard objectives remove wither.dmg
+scoreboard objectives remove wither.deaths
+scoreboard objectives remove wither.variant
 
 team remove Wither
+team remove WitherElite
 
 advancement revoke @a only wither:wither/defeated_skeleton
 advancement revoke @a only wither:wither/defeated_wither
@@ -41,11 +47,16 @@ advancement revoke @a only wither:wither/hit4_wither
 advancement revoke @a only wither:wither/hit5_wither
 advancement revoke @a only wither:wither/hit6_wither
 advancement revoke @a only wither:wither/prehit_wither
+advancement revoke @a only wither:wither/swift_wrath
+advancement revoke @a only wither:wither/untouchable
 
 schedule clear wither:wither/bedrock/death/deadbedrock1t
 schedule clear wither:wither/bedrock/death/deadbedrock2t
 schedule clear wither:wither/bedrock/death/deadbedrock3t
 schedule clear wither:wither/bedrock/death/deadbedrock4t
+schedule clear wither:wither/bedrock/death/deadbedrock5t
+schedule clear wither:wither/bedrock/death/deadbedrockendloop
+schedule clear wither:wither/bedrock/death/deadbedrockcry
 schedule clear wither:wither/phase1/check_player_tick
 schedule clear wither:wither/skull/launch
 schedule clear wither:wither/phase1/musicphase1
@@ -78,6 +89,7 @@ schedule clear wither:wither/midpoint/midpoint2
 schedule clear wither:wither/midpoint/midpointtick
 schedule clear wither:wither/midpoint/midpointparttick
 schedule clear wither:wither/midpoint/midpointbedrock
+schedule clear wither:wither/midpoint/midpointbedrock_skeletons
 schedule clear wither:wither/midpoint/midpoint2.5
 schedule clear wither:wither/midpoint/midpointground
 schedule clear wither:wither/midpoint/spawns/blaze1
@@ -119,6 +131,10 @@ schedule clear wither:wither/midpoint/particles/clearlev
 schedule clear wither:wither/passive/skull
 schedule clear wither:wither/passive/spawn
 schedule clear wither:wither/passive/convert
+schedule clear wither:wither/passive/variants/miniskull_tick
+schedule clear wither:nether_star/tick
+schedule clear wither:wither/fight_start/showcase/loop
+schedule clear wither:stats/show
 schedule clear wither:wither/skull
 schedule clear wither:wither_check
 schedule clear wither:5tick
@@ -154,6 +170,8 @@ data remove storage wither:options togglespawns_string
 data remove storage wither:options toggleweather_string
 data remove storage wither:options spawnreq_string
 data remove storage wither:options toggleanimation_string
+data remove storage wither:options bedrockmode
+data remove storage wither:options bedrockmode_string
 data remove storage wither:options initialized
 data remove storage wither:wither_position input
 data remove storage temp Head

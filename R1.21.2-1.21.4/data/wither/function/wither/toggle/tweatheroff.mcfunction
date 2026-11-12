@@ -1,3 +1,4 @@
 data modify storage wither:options toggleweather set value Disabled
+data modify storage wither:options toggleweather_string set value '"#e80f00"'
 
-# Could make this show config again
+function wither:dialog/main

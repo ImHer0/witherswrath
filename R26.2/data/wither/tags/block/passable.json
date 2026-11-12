@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "#minecraft:air",
+      "required": false
+    },
+    {
+      "id": "minecraft:short_grass",
+      "required": false
+    },
+    {
+      "id": "minecraft:fern",
+      "required": false
+    },
+    {
+      "id": "minecraft:snow",
+      "required": false
+    },
+    {
+      "id": "minecraft:dead_bush",
+      "required": false
+    }
+  ]
+}

@@ -1,11 +1,16 @@
 # spawn Purge
 
 execute as @e[type=minecraft:wither] run data merge entity @s {attributes:[{id:"minecraft:flying_speed",base:1}]}
-execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run summon creeper ~ ~ ~ {Team:"Wither",Silent:1b,Invulnerable:1b,CustomNameVisible:0b,ExplosionRadius:13b,Fuse:1,ignited:1b,CustomName:"the Wither's Wrath"}
-execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:explosion_emitter ~ ~ ~ 0 1 0 0.6 6 force
-execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:campfire_signal_smoke ~ ~ ~ 0 1 0 0.6 300 force
-execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:lava ~ ~ ~ 3 3 3 0.1 200 force
+execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run summon creeper ~ ~ ~ {Team:"Wither",Silent:1b,Invulnerable:1b,CustomNameVisible:0b,ExplosionRadius:9b,Fuse:1,ignited:1b,CustomName:"the Wither's Wrath"}
+execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:explosion_emitter ~ ~ ~ 0 1 0 0.6 6 normal
+execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:campfire_signal_smoke ~ ~ ~ 0 1 0 0.6 75 normal
+execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run particle minecraft:lava ~ ~ ~ 3 3 3 0.1 50 normal
+execute as @e[type=minecraft:wither] at @s if data storage wither:options {toggleanimation:Default} run function wither:wither/fight_start/showcase/blast
 scoreboard players set wspawn spawn 0
+
+# FIGHT STATS: start the timer
+function wither:stats/start
+
 execute as @e[type=player] run attribute @s minecraft:gravity modifier remove 1
 
 
@@ -16,5 +21,5 @@ kill @e[type=armor_stand,tag=wither_spin,limit=1]
 schedule clear wither:wither/fight_start/bedrock_1t
 schedule clear wither:wither/fight_start/part
 
-schedule function wither:wither/phase1/musicphase1 1t
+execute unless data storage wither:options {toggleanimation:Bedrock} run schedule function wither:wither/phase1/musicphase1 1t
 

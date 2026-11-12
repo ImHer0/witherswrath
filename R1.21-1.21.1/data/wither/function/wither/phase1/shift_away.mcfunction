@@ -18,12 +18,11 @@ execute as @e[type=minecraft:wither,sort=nearest,limit=1] run scoreboard players
 # Normalize and scale the motion (divide by 1000 to get proper motion values, then scale for desired speed)
 # Motion values: X, Y (with upward boost), Z
 execute as @e[type=minecraft:wither,sort=nearest,limit=1] store result entity @s Motion[0] double 0.0003 run scoreboard players get @s wither.temp.x
-execute as @e[type=minecraft:wither,sort=nearest,limit=1] store result entity @s Motion[1] double 0.0004 run scoreboard players get @s wither.temp.y
+execute as @e[type=minecraft:wither,sort=nearest,limit=1] store result entity @s Motion[1] double 0.0001 run scoreboard players get @s wither.temp.y
 execute as @e[type=minecraft:wither,sort=nearest,limit=1] store result entity @s Motion[2] double 0.0003 run scoreboard players get @s wither.temp.z
 
 # Add additional upward motion boost to help escape
 execute as @e[type=minecraft:wither,sort=nearest,limit=1] run data modify entity @s Motion[1] set value 0.4d
 
 # Make the wither face away from the player while moving
-execute as @e[type=minecraft:wither,sort=nearest,limit=1] at @s rotated as @s run tp @s ~ ~ ~ facing entity @p eyes
-execute as @e[type=minecraft:wither,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~180 ~
+execute as @e[type=minecraft:wither,sort=nearest,limit=1] at @s rotated as @s run tp @e[type=minecraft:wither,sort=nearest,limit=1] ~ ~ ~ facing entity @p eyes
